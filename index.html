@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Build your own FOI agent — Webinar</title>
+  <meta name="description" content="A hands-on webinar for UK public sector teams: build a declarative Freedom of Information agent in Microsoft Copilot Agent Builder." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>FOI Agent Webinar</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Overview</a>
+        <a href="build.html">Build the agent</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="pill">Live webinar · UK public sector</span>
+        <h1 class="mt-2">Build your own Freedom of Information agent in Copilot</h1>
+        <p class="lead">
+          Join hundreds of public sector colleagues to build a declarative FOI
+          agent in Microsoft 365 Copilot Agent Builder. We&rsquo;ll triage
+          incoming requests against published guidance, hand qualified work over
+          to your existing FOI process, and draft tactful responses &mdash; all
+          from inside Outlook.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="build.html">Start the build guide</a>
+          <a class="btn btn-ghost" href="resources.html">Browse resources</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>The FOI process</h2>
+        <p class="section-lead">
+          We break a typical FOI workflow into three stages. Copilot is well
+          suited to stages 1 and 3 &mdash; the parts that involve reading
+          guidance and drafting language. Stage 2 stays with your people,
+          because it needs access to data that the requester (and Copilot
+          acting on their behalf) doesn&rsquo;t have.
+        </p>
+
+        <div class="foi-flow" aria-label="FOI process diagram">
+          <div class="foi-flow-stages">
+            <div class="stage triage">
+              <div class="num">Stage 1</div>
+              <h3>Triage request</h3>
+              <p>Check the request against ICO and sector guidance. Identify exemptions, PII, vexatious or overly broad asks.</p>
+              <span class="stage-badge">Semi-automated by the agent</span>
+            </div>
+            <div class="arrow" aria-hidden="true">&rarr;</div>
+            <div class="stage action">
+              <div class="num">Stage 2</div>
+              <h3>Action request</h3>
+              <p>Gather information across the organisation. Requires privileged access far beyond a single user&rsquo;s permissions.</p>
+              <span class="stage-badge">Stays manual &mdash; handed to FOI team</span>
+            </div>
+            <div class="arrow" aria-hidden="true">&rarr;</div>
+            <div class="stage respond">
+              <div class="num">Stage 3</div>
+              <h3>Respond to citizen</h3>
+              <p>Draft a clear, compliant reply &mdash; whether accepting, refusing, or asking for clarification.</p>
+              <span class="stage-badge">Semi-automated by the agent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Why Copilot can&rsquo;t do stage 2 (and why that&rsquo;s OK)</h2>
+        <p class="section-lead">
+          Copilot operates with the permissions of the signed-in user. An FOI
+          response usually needs a privileged, organisation-wide view of a
+          subject. That&rsquo;s a job for your established FOI process and the
+          people authorised to run it. The agent&rsquo;s value is removing the
+          repetitive reading, classifying and drafting work that surrounds it.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Reads the same guidance you do</h3>
+            <p>Point it at the ICO, College of Policing, or your own SharePoint policy library. It applies the same rules, consistently.</p>
+          </div>
+          <div class="card">
+            <h3>Lives where the work arrives</h3>
+            <p>Triage happens inside Outlook on the incoming email &mdash; no copy-pasting, no new tools to learn.</p>
+          </div>
+          <div class="card">
+            <h3>Hands off cleanly</h3>
+            <p>Qualified requests are passed to your existing FOI process untouched. Nothing is auto-sent to citizens.</p>
+          </div>
+          <div class="card">
+            <h3>Drafts, never decides</h3>
+            <p>For rejections and exemptions, the agent prepares a draft reply for a human to review, edit and approve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>What you&rsquo;ll leave with</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>A working FOI triage agent</h3>
+            <p>Built declaratively in Copilot Agent Builder &mdash; no code, no infrastructure to deploy.</p>
+          </div>
+          <div class="card">
+            <h3>A reusable prompt pack</h3>
+            <p>Instructions, starter prompts and knowledge sources tailored for UK public sector FOI work.</p>
+          </div>
+          <div class="card">
+            <h3>A repeatable pattern</h3>
+            <p>The triage &rarr; hand-off &rarr; draft pattern applies to SARs, complaints, and many other inbound flows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Agenda</h2>
+        <table>
+          <thead>
+            <tr><th style="width:120px">Time</th><th>Session</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>00:00</td><td>Welcome &amp; the FOI landscape in 2026</td></tr>
+            <tr><td>00:10</td><td>The three-stage FOI process &mdash; where Copilot fits</td></tr>
+            <tr><td>00:20</td><td>Live build: create the agent in Copilot Agent Builder</td></tr>
+            <tr><td>00:40</td><td>Live build: add knowledge sources (ICO, sector guidance)</td></tr>
+            <tr><td>00:55</td><td>Live build: triage instructions &amp; response drafting</td></tr>
+            <tr><td>01:15</td><td>Test against sample FOI requests</td></tr>
+            <tr><td>01:30</td><td>Deployment, governance and Q&amp;A</td></tr>
+          </tbody>
+        </table>
+        <p class="text-muted mt-2">Times are indicative. The full build guide is on the <a href="build.html">Build the agent</a> page so you can work through it at your own pace.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>FOI Agent Webinar &middot; Companion site</div>
+      <div>Built for UK public sector teams &middot; <a href="resources.html">Resources</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

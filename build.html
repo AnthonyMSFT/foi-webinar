@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Build the agent — FOI Agent Webinar</title>
+  <meta name="description" content="Step-by-step instructions to build a declarative FOI agent in Microsoft Copilot Agent Builder." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>FOI Agent Webinar</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Overview</a>
+        <a href="build.html">Build the agent</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="pill">Hands-on build</span>
+        <h1 class="mt-2">Build the FOI agent</h1>
+        <p class="lead">
+          Follow these steps in Microsoft 365 Copilot Agent Builder. Everything
+          is declarative &mdash; no code, no Azure, no admin approvals beyond
+          your normal Copilot agent publishing process.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#step-1">Start at step 1</a>
+          <a class="btn btn-ghost" href="resources.html">Open the prompt library</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Before you start</h2>
+        <div class="callout">
+          <strong>You will need:</strong>
+          <ul>
+            <li>A Microsoft 365 Copilot licence with Agent Builder enabled.</li>
+            <li>Permission to publish agents to yourself (we won&rsquo;t deploy organisation-wide today).</li>
+            <li>One or two real (or realistic) sample FOI requests to test against.</li>
+            <li>The public URL of the guidance you want the agent to follow &mdash; e.g. the <a href="https://ico.org.uk/for-organisations/foi/" target="_blank" rel="noopener">ICO FOI hub</a> or your sector regulator.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>The build, step by step</h2>
+        <p class="section-lead">Each step takes roughly 2&ndash;5 minutes. Copy prompts directly from the dark blocks.</p>
+
+        <div class="steps">
+
+          <article class="step" id="step-1">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Open Copilot Agent Builder</h3>
+              <p>In Microsoft 365 Copilot, choose <strong>Create agent</strong>. Pick the <em>Custom</em> option so you can write your own instructions and add knowledge sources.</p>
+              <ul>
+                <li>Name: <code>FOI Triage Assistant</code></li>
+                <li>Icon: choose anything recognisable &mdash; we&rsquo;ll come back to branding later.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="step" id="step-2">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Write the agent description</h3>
+              <p>The description is what colleagues see when they pick the agent. Keep it crisp and scope-bound.</p>
+              <div class="prompt" data-copy="Helps Public Access and FOI colleagues triage incoming Freedom of Information requests against ICO guidance and our internal policies. Identifies likely exemptions, PII risks, vexatious or overly broad requests, and drafts citizen responses for refusals. Does not action requests or send replies automatically.">Helps Public Access and FOI colleagues triage incoming Freedom of Information requests against ICO guidance and our internal policies. Identifies likely exemptions, PII risks, vexatious or overly broad requests, and drafts citizen responses for refusals. Does not action requests or send replies automatically.</div>
+            </div>
+          </article>
+
+          <article class="step" id="step-3">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Add the system instructions</h3>
+              <p>This is the heart of the agent. It defines the triage &rarr; hand-off &rarr; draft pattern and the guardrails.</p>
+              <div class="prompt" data-copy="# Purpose
+Manage incoming FOI and SAR requests to the UK Department for Copilot and AI.
+
+## Response Format
+Always reply using the following strict format and do not add any extra information:
+
+- **Classification:** FOI/SAR/Other
+- **Action:** Action/Exempt
+- **Justification:** If exempt, provide a short (up to 100 words) justification. When exempting, always cite relevant legislation and highlight it in **bold** within the justification.
+
+## Guidelines
+- Review the content of each request and classify as FOI, SAR, or Other.
+- Consult ICO guidance from provided URLs for each classification.
+- Decide whether to Action or Exempt the request based on ICO standards.
+- Provide clear justification for any exemptions, always citing and highlighting the relevant legislation in **bold**.
+
+## Example
+Given an email: &quot;Please send me all data you hold about me.&quot;
+- Classification: SAR
+- Action: Action
+- Justification: N/A
+
+If a request is unclear, ask for clarification in the same strict format.">
+<h4 class="mt-3">Purpose</h4>
+<p>Manage incoming FOI and SAR requests to the UK Department for Copilot and AI.</p>
+
+<h4>Response format</h4>
+<p>Always reply using the following strict format and do not add any extra information:</p>
+<ul>
+  <li><strong>Classification:</strong> FOI / SAR / Other</li>
+  <li><strong>Action:</strong> Action / Exempt</li>
+  <li><strong>Justification:</strong> If exempt, provide a short (up to 100 words) justification. When exempting, always cite relevant legislation and highlight it in <strong>bold</strong> within the justification.</li>
+</ul>
+
+<h4>Guidelines</h4>
+<ul>
+  <li>Review the content of each request and classify as FOI, SAR, or Other.</li>
+  <li>Consult ICO guidance from provided URLs for each classification.</li>
+  <li>Decide whether to Action or Exempt the request based on ICO standards.</li>
+  <li>Provide clear justification for any exemptions, always citing and highlighting the relevant legislation in <strong>bold</strong>.</li>
+</ul>
+
+<h4>Example</h4>
+<p>Given an email: &ldquo;Please send me all data you hold about me.&rdquo;</p>
+<ul>
+  <li>Classification: SAR</li>
+  <li>Action: Action</li>
+  <li>Justification: N/A</li>
+</ul>
+<p>If a request is unclear, ask for clarification in the same strict format.</p></div>
+            </div>
+          </article>
+
+          <article class="step" id="step-4">
+            <div class="step-num">4</div>
+            <div>
+              <h3>Add knowledge sources</h3>
+              <p>In Agent Builder, add <strong>Knowledge &rarr; Public website</strong> for each authoritative source. Start narrow &mdash; quality beats volume.</p>
+              <ul>
+                <li><code>https://ico.org.uk/for-organisations/foi/</code> &mdash; ICO FOI hub</li>
+                <li>Your sector regulator (e.g. College of Policing APP on Information Management for forces; relevant guidance for HMRC, councils, NHS trusts, etc.)</li>
+                <li>Optional: a SharePoint site or document library containing your internal FOI handling policy</li>
+              </ul>
+              <div class="callout">
+                <strong>Tip:</strong> Tell colleagues that only public sources are indexed today. Adding SharePoint content is fine, but be deliberate &mdash; the agent will inherit each user&rsquo;s permissions on those files.
+              </div>
+            </div>
+          </article>
+
+          <article class="step" id="step-5">
+            <div class="step-num">5</div>
+            <div>
+              <h3>Add starter prompts</h3>
+              <p>Starter prompts appear in the agent&rsquo;s welcome screen. They cue the right behaviour and make the agent feel purpose-built.</p>
+              <table>
+                <thead><tr><th>Label</th><th>Prompt</th></tr></thead>
+                <tbody>
+                  <tr><td>Triage this request</td><td>Triage the FOI request in this email. List any likely exemptions, PII concerns and broadness issues, with citations.</td></tr>
+                  <tr><td>Is this a SAR?</td><td>Tell me whether the request in this email is a Subject Access Request rather than an FOI request, and explain why.</td></tr>
+                  <tr><td>Draft a refusal</td><td>Draft a polite citizen-facing refusal for this request, citing the relevant FOIA section and the ICO guidance.</td></tr>
+                  <tr><td>Ask for clarification</td><td>Draft a short reply asking the requester to narrow the scope so we can respond within the cost limit.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="step" id="step-6">
+            <div class="step-num">6</div>
+            <div>
+              <h3>Test against sample requests</h3>
+              <p>Open the agent in Outlook on a sample email and run each starter prompt. Look for three things:</p>
+              <ul>
+                <li><strong>Citations</strong> &mdash; every exemption claim links back to ICO or sector guidance.</li>
+                <li><strong>Hand-off discipline</strong> &mdash; for accepted requests, it stops and refers to your FOI process.</li>
+                <li><strong>Tone</strong> &mdash; drafts are polite, plain English, UK spelling, no jargon.</li>
+              </ul>
+              <p>Use the <a href="resources.html#samples">sample requests</a> on the resources page if you don&rsquo;t have one handy.</p>
+            </div>
+          </article>
+
+          <article class="step" id="step-7">
+            <div class="step-num">7</div>
+            <div>
+              <h3>Iterate the instructions</h3>
+              <p>Common tweaks after first testing:</p>
+              <ul>
+                <li>Force a structured output (e.g. <em>Recommendation, Reasoning, Citations, Suggested next step</em>).</li>
+                <li>Add an explicit list of exemptions your team sees most often.</li>
+                <li>Tell it to refuse to draft anything until the officer confirms the triage outcome.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="step" id="step-8">
+            <div class="step-num">8</div>
+            <div>
+              <h3>Publish to yourself, then to your team</h3>
+              <p>Publish privately first. Once you&rsquo;re happy, ask your Copilot admin to approve the agent for your FOI team. Keep the scope small &mdash; this is a power tool for trained officers, not a public-facing chatbot.</p>
+              <div class="callout">
+                <strong>Governance reminder:</strong> Log the agent in your AI register, capture an owner, and schedule a review date. The ICO expects organisations to know which AI tools are touching information-rights work.
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Where to go next</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Tune the prompts</h3>
+            <p>Grab the full prompt pack on the <a href="resources.html">Resources</a> page and adapt it to your organisation&rsquo;s tone of voice.</p>
+          </div>
+          <div class="card">
+            <h3>Apply the pattern elsewhere</h3>
+            <p>The same triage &rarr; hand-off &rarr; draft pattern works for SARs, complaints, MP correspondence and councillor enquiries.</p>
+          </div>
+          <div class="card">
+            <h3>Share what you build</h3>
+            <p>Webinar attendees: post a screenshot of your working agent in the Teams channel. We&rsquo;ll showcase the best examples.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>FOI Agent Webinar &middot; Build guide</div>
+      <div><a href="index.html">Back to overview</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

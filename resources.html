@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources — FOI Agent Webinar</title>
+  <meta name="description" content="Guidance links, prompt pack, sample FOI requests, and FAQ for the FOI agent webinar." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>FOI Agent Webinar</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Overview</a>
+        <a href="build.html">Build the agent</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="pill">Reference material</span>
+        <h1 class="mt-2">Resources</h1>
+        <p class="lead">
+          Curated guidance links, a starter prompt pack, sample FOI requests
+          for testing, and answers to the questions we hear most often.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Authoritative guidance</h2>
+        <p class="section-lead">Use these as knowledge sources for your agent. They are public, free, and updated regularly.</p>
+        <div class="resource-list">
+          <div class="resource">
+            <div>
+              <strong>Information Commissioner&rsquo;s Office &mdash; FOI hub</strong>
+              <div class="meta">Statutory regulator guidance on FOIA exemptions, time limits, fees and complaints.</div>
+            </div>
+            <a class="btn btn-ghost" href="https://ico.org.uk/for-organisations/foi/" target="_blank" rel="noopener">Open</a>
+          </div>
+          <div class="resource">
+            <div>
+              <strong>Freedom of Information Act 2000 (legislation.gov.uk)</strong>
+              <div class="meta">The Act itself &mdash; useful for citing specific sections in agent responses.</div>
+            </div>
+            <a class="btn btn-ghost" href="https://www.legislation.gov.uk/ukpga/2000/36/contents" target="_blank" rel="noopener">Open</a>
+          </div>
+          <div class="resource">
+            <div>
+              <strong>College of Policing &mdash; Information Management APP</strong>
+              <div class="meta">Authorised Professional Practice for forces handling information rights.</div>
+            </div>
+            <a class="btn btn-ghost" href="https://www.college.police.uk/app/information-management" target="_blank" rel="noopener">Open</a>
+          </div>
+          <div class="resource">
+            <div>
+              <strong>Cabinet Office &mdash; FOI Code of Practice (s.45)</strong>
+              <div class="meta">How public authorities should handle requests, including consultation and transfers.</div>
+            </div>
+            <a class="btn btn-ghost" href="https://www.gov.uk/government/publications/freedom-of-information-code-of-practice" target="_blank" rel="noopener">Open</a>
+          </div>
+        </div>
+        <p class="text-muted mt-2">Add your own internal FOI policy as a SharePoint knowledge source for organisation-specific nuances.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Prompt pack</h2>
+        <p class="section-lead">Drop-in prompts you can use during testing or save as starter prompts on the agent.</p>
+
+        <h3 class="mt-4">Triage prompt</h3>
+        <div class="prompt" data-copy="Triage the FOI request in the email I have open. Produce your answer in this structure:
+
+1. Recommendation — one of: Accept and hand to FOI process / Request clarification / Refuse (with FOIA section) / Treat as SAR.
+2. Reasoning — 2–4 short bullets.
+3. Citations — list the ICO or sector guidance URLs and section numbers you relied on.
+4. Suggested next step — what the officer should do now.
+
+Do not draft a citizen-facing reply yet. Wait for me to confirm.">Triage the FOI request in the email I have open. Produce your answer in this structure:
+
+1. Recommendation — one of: Accept and hand to FOI process / Request clarification / Refuse (with FOIA section) / Treat as SAR.
+2. Reasoning — 2–4 short bullets.
+3. Citations — list the ICO or sector guidance URLs and section numbers you relied on.
+4. Suggested next step — what the officer should do now.
+
+Do not draft a citizen-facing reply yet. Wait for me to confirm.</div>
+
+        <h3 class="mt-4">Refusal drafting prompt</h3>
+        <div class="prompt" data-copy="Draft a citizen-facing refusal email for the FOI request in this thread.
+
+Requirements:
+- Polite, plain English, UK spelling.
+- Cite the FOIA section we are relying on and explain it in one sentence a non-lawyer can understand.
+- Include the standard internal review and ICO complaint signposting.
+- Sign off as 'The Freedom of Information Team' unless I tell you otherwise.
+- Do NOT send. Return the draft for me to review.">Draft a citizen-facing refusal email for the FOI request in this thread.
+
+Requirements:
+- Polite, plain English, UK spelling.
+- Cite the FOIA section we are relying on and explain it in one sentence a non-lawyer can understand.
+- Include the standard internal review and ICO complaint signposting.
+- Sign off as 'The Freedom of Information Team' unless I tell you otherwise.
+- Do NOT send. Return the draft for me to review.</div>
+
+        <h3 class="mt-4">Clarification prompt</h3>
+        <div class="prompt" data-copy="Draft a short, friendly reply asking the requester to narrow the scope of their FOI request so we can answer within the s.12 cost limit. Suggest 2–3 specific ways they could refine it, based on what they have asked for. Plain English, UK spelling, no jargon.">Draft a short, friendly reply asking the requester to narrow the scope of their FOI request so we can answer within the s.12 cost limit. Suggest 2–3 specific ways they could refine it, based on what they have asked for. Plain English, UK spelling, no jargon.</div>
+
+        <h3 class="mt-4">SAR re-route prompt</h3>
+        <div class="prompt" data-copy="The request in this email is about the requester's own personal data, so it is a Subject Access Request rather than an FOI request. Draft a short reply explaining this, confirming we will re-route it to the Data Protection team, and including the timescales they should expect under UK GDPR.">The request in this email is about the requester's own personal data, so it is a Subject Access Request rather than an FOI request. Draft a short reply explaining this, confirming we will re-route it to the Data Protection team, and including the timescales they should expect under UK GDPR.</div>
+      </div>
+    </section>
+
+    <section id="samples">
+      <div class="container">
+        <h2>Sample emails for testing</h2>
+        <p class="section-lead">
+          Realistic, citizen-voice requests written without the words
+          &ldquo;FOI&rdquo;, &ldquo;Freedom of Information&rdquo;,
+          &ldquo;Subject Access Request&rdquo; or &ldquo;data protection&rdquo;
+          &mdash; so the agent has to do the work. Click any card to expand
+          it, then use <strong>Try it in Outlook</strong> to open Outlook on
+          the Web with the subject and body pre-populated.
+        </p>
+      </div>
+    </section>
+
+    <section id="approved">
+      <div class="container">
+        <details class="category-card">
+          <summary class="category-summary">
+            <h2 class="category-title">FOI &mdash; Accept</h2>
+            <span class="category-count">5 examples</span>
+          </summary>
+          <div class="category-body">
+            <p class="section-lead">Five everyday requests with no exemptions engaged. The agent should triage as &ldquo;accept&rdquo; and tell the officer to hand to the existing FOI process.</p>
+            <div class="email-stack">
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-approve">FOI Accept &middot; Public spend</span>
+              <div class="email-subject">Request for information &mdash; external legal advice spend 2024/25</div>
+              <div class="email-summary-from">From J. Patel</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: J. Patel &lt;j.patel@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: the total spend on external legal advice for the financial year 2024/25, broken down by month and, if possible, by the department or service area that commissioned the advice.
+
+A spreadsheet would be ideal.
+
+Many thanks,
+J. Patel</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-approve">FOI Accept &middot; Service performance</span>
+              <div class="email-subject">Pothole repairs by ward</div>
+              <div class="email-summary-from">From S. Mendes</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: S. Mendes &lt;s.mendes@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: the number of potholes reported and the number repaired in each council ward over the last twelve months. Monthly figures would be ideal, but a single annual total per ward is fine if monthly isn&rsquo;t easily available.
+
+Kind regards,
+S. Mendes</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-approve">FOI Accept &middot; Workforce data</span>
+              <div class="email-subject">Adult social care vacancies</div>
+              <div class="email-summary-from">From Dr A. Okafor</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: Dr A. Okafor &lt;a.okafor@example.ac.uk&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: the number of vacant posts in your adult social care service as at the end of each quarter for the last two years, broken down by role (for example social worker, occupational therapist, care assistant).
+
+Many thanks,
+Dr A. Okafor</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-approve">FOI Accept &middot; Enforcement stats</span>
+              <div class="email-subject">Fly-tipping fixed penalty notices</div>
+              <div class="email-summary-from">From L. Burgess</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: L. Burgess &lt;l.burgess@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: the number of fixed penalty notices issued for fly-tipping in 2024/25, broken down by ward and by month if possible. Just the totals &mdash; no personal details of the offenders.
+
+Kind regards,
+L. Burgess</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-approve">FOI Accept &middot; Complaints data</span>
+              <div class="email-subject">Waste collection complaints 2024/25</div>
+              <div class="email-summary-from">From R. Choudhury</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: R. Choudhury &lt;r.choudhury@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: the total number of complaints received about waste and recycling collections during the financial year 2024/25, broken down by month and by the type of complaint (missed collection, damaged bin, and so on).
+
+Many thanks,
+R. Choudhury</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="exempt">
+      <div class="container">
+        <details class="category-card">
+          <summary class="category-summary">
+            <h2 class="category-title">FOI &mdash; Exempt</h2>
+            <span class="category-count">5 examples</span>
+          </summary>
+          <div class="category-body">
+            <p class="section-lead">Five requests that each engage at least one FOIA exemption. The agent should identify the issue, refuse to action, and offer to draft a refusal letter for the officer to review.</p>
+            <div class="email-stack">
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-reject">FOI Exempt &middot; Sweeping scope</span>
+              <div class="email-subject">Information request &mdash; restructure mentions</div>
+              <div class="email-summary-from">From P. Greaves</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: P. Greaves &lt;p.greaves@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: copies of every email, memo, briefing note and meeting minute produced by any team over the past seven years that mentions the word &lsquo;restructure&rsquo;. A spreadsheet would be fine.
+
+Thanks,
+P. Greaves</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-reject">FOI Exempt &middot; Hostile / repeat pattern</span>
+              <div class="email-subject">ANOTHER request &mdash; finance team details</div>
+              <div class="email-summary-from">From M. Cresswell</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: M. Cresswell &lt;m.cresswell@example.com&gt;</div></div>
+              <div class="email-body">This is the 23rd time I have written this month. You people are clearly hiding something. As before, I am requesting the recorded information you hold about your finance team &mdash; specifically the names, salaries, home postcodes and disciplinary histories of every member &mdash; or I will be contacting my MP again.
+
+M. Cresswell</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-reject">FOI Exempt &middot; Third-party personal data</span>
+              <div class="email-subject">Information about officer &mdash; case 2024/RB/0098</div>
+              <div class="email-summary-from">From B. Thornton</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: B. Thornton &lt;b.thornton@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: the full name, job title, work mobile number, line manager and start date of the officer who handled my neighbour&rsquo;s case (reference 2024/RB/0098), along with any complaints that have ever been made against them.
+
+Regards,
+B. Thornton</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-reject">FOI Exempt &middot; Law enforcement</span>
+              <div class="email-subject">Surveillance information request</div>
+              <div class="email-summary-from">From C. Whittaker</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: C. Whittaker &lt;c.whittaker@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: a map of all covert observation points and number-plate camera positions currently in use across the borough, together with the duty rota for the surveillance team for the next month.
+
+Regards,
+C. Whittaker</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-reject">FOI Exempt &middot; Legal privilege</span>
+              <div class="email-subject">Legal correspondence &mdash; Bramwell Construction dispute</div>
+              <div class="email-summary-from">From N. Voss</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: N. Voss &lt;n.voss@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to request the following recorded information held by your organisation: all correspondence and written advice between your in-house lawyers and external counsel regarding the ongoing dispute with Bramwell Construction Ltd, including any draft witness statements and counsel&rsquo;s opinions.
+
+Thanks,
+N. Voss</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="sar">
+      <div class="container">
+        <details class="category-card">
+          <summary class="category-summary">
+            <h2 class="category-title">SAR</h2>
+            <span class="category-count">5 examples</span>
+          </summary>
+          <div class="category-body">
+            <p class="section-lead">Five requests where the citizen is clearly asking for their own personal data. The agent should recognise the SAR pattern, refuse to action under FOI, and recommend re-routing to the Data Protection team to handle.</p>
+            <div class="email-stack">
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-sar">SAR &middot; Everything on file</span>
+              <div class="email-subject">Information you hold on me</div>
+              <div class="email-summary-from">From D. Mottram</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: D. Mottram &lt;d.mottram@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+Please send me everything you hold on me &mdash; letters, internal notes, meeting minutes, anything an officer has written about my situation since I first contacted you in 2019.
+
+Thanks,
+D. Mottram</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-sar">SAR &middot; Housing case file</span>
+              <div class="email-subject">My housing case file</div>
+              <div class="email-summary-from">From R. Iqbal</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: R. Iqbal &lt;r.iqbal@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+Please send me my full case file from your housing team, including any assessments, officer notes, and internal emails between officers about my application.
+
+I&rsquo;ve been on the waiting list since 2022 and need to understand what has been written about my case.
+
+Thanks,
+R. Iqbal</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-sar">SAR &middot; Meeting notes about me</span>
+              <div class="email-subject">Notes from my meeting on 4 April</div>
+              <div class="email-summary-from">From P. Skarsgard</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: P. Skarsgard &lt;p.skarsgard@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+Following my recent meeting with your benefits team on 4 April, please send me the notes the officer took during the meeting and any follow-up emails or messages between staff that refer to me.
+
+Thanks,
+P. Skarsgard</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-sar">SAR &middot; Parental SAR for child</span>
+              <div class="email-subject">My son&rsquo;s behaviour record this year</div>
+              <div class="email-summary-from">From L. Adeyemi</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: L. Adeyemi &lt;l.adeyemi@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I&rsquo;d like to see everything the school holds about my son&rsquo;s behaviour this academic year &mdash; teacher notes, incident logs, any internal emails about him, and any safeguarding referrals that have been made.
+
+He is in Year 8, pupil reference TA-2026-1147.
+
+Kind regards,
+L. Adeyemi</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+          <details class="email-card">
+            <summary>
+              <span class="email-tag tag-sar">SAR &middot; Ex-employee personnel file</span>
+              <div class="email-subject">My personnel file</div>
+              <div class="email-summary-from">From K. Tomlinson</div>
+            </summary>
+            <div class="email-card-body">
+              <div class="email-header"><div class="email-from">From: K. Tomlinson &lt;k.tomlinson@example.com&gt;</div></div>
+              <div class="email-body">Hello,
+
+I left the organisation at the end of March. Please send me my complete personnel file, including appraisals, training records, sickness absence notes, and any emails between my line managers that mention me.
+
+Thanks,
+K. Tomlinson</div>
+              <div class="email-actions"><button class="btn btn-primary try-it" type="button">Try it in Outlook</button></div>
+            </div>
+          </details>
+
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+
+        <h3 class="mt-4">Will the agent send replies to citizens automatically?</h3>
+        <p class="text-muted">No. The agent only drafts. A human officer must review and send every reply.</p>
+
+        <h3 class="mt-4">Can it search across all our data to answer the request?</h3>
+        <p class="text-muted">No &mdash; and this is by design. Copilot operates with the signed-in user&rsquo;s permissions. FOI responses need a privileged, organisation-wide view, which is why stage 2 (action) stays with your existing FOI process.</p>
+
+        <h3 class="mt-4">What about confidential or sensitive guidance?</h3>
+        <p class="text-muted">Add it as a SharePoint knowledge source and rely on SharePoint permissions. Be aware that the agent will only surface content each user is already allowed to see.</p>
+
+        <h3 class="mt-4">Do we need an AI register entry?</h3>
+        <p class="text-muted">Yes. Treat this like any other AI tool touching information-rights work: assign an owner, document the purpose, and schedule a review.</p>
+
+        <h3 class="mt-4">Can we reuse the pattern for SARs or complaints?</h3>
+        <p class="text-muted">Absolutely. The triage &rarr; hand-off &rarr; draft pattern works wherever the inbound work needs human judgement on access to data, but the surrounding reading and drafting is repetitive.</p>
+
+        <h3 class="mt-4">Can we build agents for other similar flows?</h3>
+        <p class="text-muted">Yes. This is a worked example of a <strong>Retrieval-Augmented Generation (RAG)</strong> agent: a question or instruction comes in, the agent looks up a curated set of guidance documents, and it generates an answer grounded in that material. The same pattern fits anywhere you have an inbound query plus an authoritative body of guidance &mdash; for example procurement queries against contract standing orders, HR questions against your policy library, or planning queries against local development plans.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>FOI Agent Webinar &middot; Resources</div>
+      <div><a href="index.html">Back to overview</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
