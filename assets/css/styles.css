@@ -886,7 +886,7 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .pill-spark { width: 12px; height: 12px; margin-right: 4px; vertical-align: -1px; color: var(--brand); display: inline-block; }
 
 /* Hero two-column layout with illustration */
-.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: end; }
 .hero-content { min-width: 0; }
 .hero-visual { position: relative; width: calc(100% + 140px); margin-right: -120px; margin-left: auto; }
 .hero-visual svg { width: 100%; height: auto; max-width: 100%; display: block; margin-left: auto; }
@@ -920,7 +920,7 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .footer-sep { color: var(--muted); }
 
 /* Hero QR code */
-.hero-qr { position: absolute; top: -72px; right: -32px; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 8px 24px rgba(11,31,58,.10); text-decoration: none; color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; z-index: 2; }
+.hero-qr { position: absolute; top: -32px; right: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 8px 24px rgba(11,31,58,.10); text-decoration: none; color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; z-index: 2; }
 .hero-qr:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(11,31,58,.14); }
 .hero-qr img { width: 120px; height: 120px; display: block; border-radius: 8px; }
 .hero-qr-meta { display: flex; flex-direction: column; align-items: center; }
