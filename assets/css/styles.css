@@ -420,8 +420,19 @@ tr:last-child td { border-bottom: 0; }
   font-size: 0.9rem;
 }
 .site-footer .container {
-  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  display: flex; flex-direction: column; gap: 16px;
 }
+.footer-top {
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center;
+}
+.footer-fineprint {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.footer-fineprint p { margin: 0 0 4px; }
+.footer-fineprint p:last-child { margin-bottom: 0; }
 
 /* Utilities */
 .text-muted { color: var(--muted); }
@@ -913,7 +924,6 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .experience-premium .experience-product { background: linear-gradient(135deg,#fff,#f3f7fc); }
 
 /* Footer Microsoft logo */
-.site-footer .container { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
 .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); }
 .ms-logo { width: 20px; height: 20px; display: block; }
 
