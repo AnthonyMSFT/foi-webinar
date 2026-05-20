@@ -888,7 +888,7 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 /* Hero two-column layout with illustration */
 .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
 .hero-content { min-width: 0; }
-.hero-visual { position: relative; transform: translateX(60px) scale(1.35); transform-origin: right center; }
+.hero-visual { position: relative; width: calc(100% + 140px); margin-right: -120px; margin-left: auto; }
 .hero-visual svg { width: 100%; height: auto; max-width: 100%; display: block; margin-left: auto; }
 @media (max-width: 880px) {
   .hero-grid { grid-template-columns: 1fr; gap: 32px; }
