@@ -920,7 +920,7 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .footer-sep { color: var(--muted); }
 
 /* Hero QR code */
-.hero-qr { position: absolute; top: -16px; left: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 8px 24px rgba(11,31,58,.10); text-decoration: none; color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; z-index: 2; }
+.hero-qr { position: absolute; top: -16px; right: 140px; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; background: #fff; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 8px 24px rgba(11,31,58,.10); text-decoration: none; color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; z-index: 2; }
 .hero-qr:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(11,31,58,.14); }
 .hero-qr img { width: 120px; height: 120px; display: block; border-radius: 8px; }
 .hero-qr-meta { display: flex; flex-direction: column; align-items: center; }
