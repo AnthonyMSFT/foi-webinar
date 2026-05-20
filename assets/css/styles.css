@@ -886,7 +886,7 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .pill-spark { width: 12px; height: 12px; margin-right: 4px; vertical-align: -1px; color: var(--brand); display: inline-block; }
 
 /* Hero two-column layout with illustration */
-.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 40px; align-items: center; }
 .hero-content { min-width: 0; }
 .hero-visual { position: relative; }
 .hero-visual svg { width: 100%; height: auto; max-width: 480px; display: block; margin-left: auto; }
