@@ -886,9 +886,9 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .pill-spark { width: 12px; height: 12px; margin-right: 4px; vertical-align: -1px; color: var(--brand); display: inline-block; }
 
 /* Hero two-column layout with illustration */
-.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 32px; align-items: center; }
 .hero-content { min-width: 0; }
-.hero-visual { position: relative; width: calc(100% + 80px); margin-right: -80px; }
+.hero-visual { position: relative; width: calc(100% + 140px); margin-right: -120px; }
 .hero-visual svg { width: 100%; height: auto; max-width: 100%; display: block; margin-left: auto; }
 .hero-visual svg a { cursor: pointer; }
 @media (max-width: 880px) {
