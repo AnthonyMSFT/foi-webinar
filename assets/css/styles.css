@@ -946,8 +946,16 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 
 /* Hero host badge — paired with the headline */
 .hero-title-row { display: flex; align-items: center; gap: 24px; margin-bottom: 8px; }
-.hero-title-row .host-float { flex: 0 0 auto; float: none; width: 150px; margin: 0; border-radius: 10px; transform: rotate(0deg); transition: transform .25s ease; }
-.hero-title-row .host-float:hover { transform: rotate(-4deg) translateY(-2px); }
+.hero-title-row .host-float { flex: 0 0 auto; float: none; width: 150px; margin: 0; border-radius: 10px; transform: rotate(0deg); animation: badge-wiggle 7s ease-in-out 2s infinite; transform-origin: center center; }
+@keyframes badge-wiggle {
+  0%   { transform: rotate(0deg) translateY(0); }
+  4%   { transform: rotate(-4deg) translateY(-2px); }
+  10%  { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-row .host-float { animation: none; }
+}
 .hero-title-row h1 { margin: 0; flex: 1 1 auto; }
 @media (max-width: 880px) { .hero-title-row { gap: 16px; } .hero-title-row .host-float { width: 96px; } }
 @media (max-width: 540px) { .hero-title-row { flex-direction: column; align-items: flex-start; } }
