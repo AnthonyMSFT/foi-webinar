@@ -948,7 +948,7 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 /* Hero host badge — paired with the headline */
 .hero-title-row { display: flex; align-items: center; gap: 24px; margin-bottom: 8px; }
 .hero-title-row .host-float-link { flex: 0 0 auto; display: inline-block; line-height: 0; }
-.hero-title-row .host-float { flex: 0 0 auto; float: none; display: block; width: 200px; height: auto; margin: 0; border-radius: 10px; transform: rotate(0deg); animation: badge-wiggle 7s ease-in-out 2s infinite; transform-origin: center center; }
+.hero-title-row .host-float { flex: 0 0 auto; float: none; display: block; width: 150px; height: auto; margin: 0; border-radius: 10px; transform: rotate(0deg); animation: badge-wiggle 7s ease-in-out 2s infinite; transform-origin: center center; }
 @keyframes badge-wiggle {
   0%   { transform: rotate(0deg) translateY(0); }
   4%   { transform: rotate(-4deg) translateY(-2px); }
