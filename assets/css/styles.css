@@ -916,7 +916,7 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); }
 .ms-logo { width: 20px; height: 20px; display: block; }
 
-.copilot-logo { width: 22px; height: 18px; display: block; }
+.copilot-logo { width: 22px; height: 22px; display: block; object-fit: contain; }
 .footer-sep { color: var(--muted); }
 
 /* Hero QR code */
