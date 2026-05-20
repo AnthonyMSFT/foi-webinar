@@ -934,3 +934,12 @@ details.category-card > summary.category-summary:hover { background: var(--surfa
 .demo-video-frame video { width: 100%; height: auto; display: block; border-radius: 12px; background: #0b1f3a; box-shadow: 0 6px 20px rgba(11,31,58,.22); }
 .demo-video figcaption { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-size: .92rem; color: var(--ink-soft); text-align: center; }
 .demo-video-badge { display: inline-flex; align-items: center; gap: 6px; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+
+/* Hero host badge */
+.host { display: flex; align-items: center; gap: 18px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); max-width: 480px; }
+.host-badge { width: 84px; height: auto; border-radius: 10px; box-shadow: 0 8px 20px rgba(11,31,58,.18); transform: rotate(-3deg); transition: transform .25s ease, box-shadow .25s ease; }
+.host-badge:hover { transform: rotate(0deg) translateY(-2px); box-shadow: 0 14px 30px rgba(11,31,58,.22); }
+.host-meta { display: flex; flex-direction: column; gap: 2px; }
+.host-label { font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.host-name { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+.host-role { font-size: .9rem; color: var(--ink-soft); }
