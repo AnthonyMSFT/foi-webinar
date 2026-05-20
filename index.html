@@ -11,7 +11,12 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <svg class="brand-mark" viewBox="0 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
+          <rect x="12" y="1" width="9" height="9" fill="#7fba00"/>
+          <rect x="1" y="12" width="9" height="9" fill="#00a4ef"/>
+          <rect x="12" y="12" width="9" height="9" fill="#ffb900"/>
+        </svg>
         <span>FOI Agent Webinar</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -24,54 +29,264 @@
 
   <main>
     <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="mt-2">Build your own Freedom of Information agent in Copilot</h1>
+          <p class="lead">
+            Join hundreds of public sector colleagues to build a declarative FOI
+            agent in Microsoft 365 Copilot Agent Builder. We&rsquo;ll triage
+            incoming requests against published guidance, hand qualified work over
+            to your existing FOI process, and draft tactful responses &mdash; all
+            from inside Outlook.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="build.html">TLDR &mdash; Just build it!</a>
+            <a class="btn btn-ghost" href="resources.html">Browse resources</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 440 380" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cp-left" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#26c6f9"/>
+                <stop offset=".55" stop-color="#0078d4"/>
+                <stop offset="1" stop-color="#5b3fd9"/>
+              </linearGradient>
+              <linearGradient id="cp-right" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#b768d6"/>
+                <stop offset=".55" stop-color="#f25022"/>
+                <stop offset="1" stop-color="#ffb900"/>
+              </linearGradient>
+              <linearGradient id="hv-outlook" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0078d4"/>
+                <stop offset="1" stop-color="#003a78"/>
+              </linearGradient>
+              <radialGradient id="hv-glow" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="#b768d6" stop-opacity=".35"/>
+                <stop offset="1" stop-color="#b768d6" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="hv-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0b1f3a" flood-opacity=".18"/>
+              </filter>
+            </defs>
+            <circle cx="220" cy="180" r="170" fill="url(#hv-glow)"/>
+            <!-- Copilot ribbon mark, centred (official Microsoft Copilot logo) -->
+            <image href="assets/img/copilot-color.png" x="140" y="80" width="160" height="160" preserveAspectRatio="xMidYMid meet"/>
+            <!-- Outlook envelope, small, bottom-left -->
+            <g transform="translate(28 232)" filter="url(#hv-shadow)">
+              <rect x="0" y="0" width="118" height="86" rx="12" fill="#fff" stroke="#dde5f0"/>
+              <rect x="0" y="0" width="118" height="24" rx="12" fill="url(#hv-outlook)"/>
+              <rect x="0" y="12" width="118" height="12" fill="url(#hv-outlook)"/>
+              <text x="59" y="17" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="9" font-weight="700" fill="#fff" letter-spacing=".5">OUTLOOK</text>
+              <rect x="10" y="34" width="98" height="42" rx="6" fill="#eaf3fb" stroke="#cfe2f3"/>
+              <circle cx="22" cy="55" r="8" fill="#0078d4"/>
+              <text x="22" y="58" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="8" font-weight="700" fill="#fff">JM</text>
+              <rect x="36" y="44" width="60" height="5" rx="2.5" fill="#0b1f3a"/>
+              <rect x="36" y="54" width="68" height="4" rx="2" fill="#6b7a90"/>
+              <rect x="36" y="63" width="50" height="4" rx="2" fill="#a8b3c4"/>
+            </g>
+            <!-- Draft response card, bottom-right -->
+            <g transform="translate(300 244)" filter="url(#hv-shadow)">
+              <rect x="0" y="0" width="118" height="74" rx="12" fill="#fff" stroke="#dde5f0"/>
+              <rect x="10" y="12" width="42" height="10" rx="5" fill="#0e7c4a"/>
+              <text x="31" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="7" font-weight="700" fill="#fff">RESPOND</text>
+              <rect x="10" y="32" width="96" height="4" rx="2" fill="#0b1f3a"/>
+              <rect x="10" y="42" width="98" height="3" rx="1.5" fill="#6b7a90"/>
+              <rect x="10" y="50" width="86" height="3" rx="1.5" fill="#6b7a90"/>
+              <rect x="10" y="58" width="72" height="3" rx="1.5" fill="#6b7a90"/>
+            </g>
+            <!-- Connecting arcs from envelope -> copilot -> draft -->
+            <path d="M150 250 Q200 220 200 200" stroke="url(#cp-left)" stroke-width="2.5" fill="none" stroke-dasharray="5 5" stroke-linecap="round"/>
+            <path d="M280 200 Q290 230 296 252" stroke="url(#cp-right)" stroke-width="2.5" fill="none" stroke-dasharray="5 5" stroke-linecap="round"/>
+            <!-- Sparkles -->
+            <g>
+              <path d="M104 78 L108 90 L120 94 L108 98 L104 110 L100 98 L88 94 L100 90 Z" fill="url(#cp-left)"/>
+              <path d="M348 92 L351 100 L359 103 L351 106 L348 114 L345 106 L337 103 L345 100 Z" fill="url(#cp-right)" opacity=".85"/>
+              <path d="M388 200 L390 206 L396 208 L390 210 L388 216 L386 210 L380 208 L386 206 Z" fill="url(#cp-right)" opacity=".7"/>
+            </g>
+          </svg>
+        </div>
+        <a class="hero-qr" href="https://aka.ms/foi-webinar/" aria-label="Open the FOI webinar link">
+          <img src="assets/img/foi-webinar-qr.png" alt="QR code linking to https://aka.ms/foi-webinar/" />
+          <div class="hero-qr-meta">
+            <span class="hero-qr-url">https://aka.ms/foi-webinar</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+
+    <section id="what-we-build">
       <div class="container">
-        <span class="pill">Live webinar · UK public sector</span>
-        <h1 class="mt-2">Build your own Freedom of Information agent in Copilot</h1>
-        <p class="lead">
-          Join hundreds of public sector colleagues to build a declarative FOI
-          agent in Microsoft 365 Copilot Agent Builder. We&rsquo;ll triage
-          incoming requests against published guidance, hand qualified work over
-          to your existing FOI process, and draft tactful responses &mdash; all
-          from inside Outlook.
+        <h2>What we&rsquo;re building</h2>
+        <p class="section-lead">
+          A <strong>semi-autonomous declarative agent</strong>, built in
+          Microsoft Copilot <strong>Agent Builder</strong>. No code, no
+          infrastructure, no separate platform to manage &mdash; the agent
+          lives inside the Microsoft 365 tenant you already have, governed by
+          the controls you already use.
         </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="build.html">Start the build guide</a>
-          <a class="btn btn-ghost" href="resources.html">Browse resources</a>
+
+        <figure class="demo-video">
+          <div class="demo-video-frame">
+            <video controls preload="metadata" playsinline poster="assets/video/foi-agent-demo-poster.jpg">
+              <source src="assets/video/foi-agent-demo.webm" type="video/webm" />
+              <source src="assets/video/foi-agent-demo.mp4" type="video/mp4" />
+              Your browser doesn&rsquo;t support embedded video.
+            </video>
+          </div>
+          <figcaption>
+            <span class="demo-video-badge">Live demo</span>
+            See the agent triage an incoming FOI request and draft a reply &mdash; inside Outlook.
+          </figcaption>
+        </figure>
+
+        <div class="build-grid">
+          <div class="build-card">
+            <span class="build-badge">No-code</span>
+            <h3>Declarative, not bespoke</h3>
+            <p>
+              Configured through Agent Builder: instructions, knowledge
+              sources, a handful of guard-rails. If your guidance changes, you
+              update the agent &mdash; not a development backlog.
+            </p>
+          </div>
+          <div class="build-card">
+            <span class="build-badge">Semi-autonomous</span>
+            <h3>Drafts &mdash; humans decide</h3>
+            <p>
+              The agent triages, classifies and writes drafts. A person reads,
+              edits and approves. Nothing is auto-sent to a citizen. Statutory
+              decisions remain with the FOI officer.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="experience-heading">Two ways your team can use it</h3>
+        <div class="experience-grid">
+          <div class="experience experience-basic">
+            <div class="experience-product" aria-hidden="true">
+              <img src="assets/img/copilot-color.png" alt="" class="experience-logo" />
+              <span>Copilot Chat</span>
+            </div>
+            <div class="experience-header">
+              <span class="experience-license">Copilot <strong>Basic</strong></span>
+              <span class="experience-tag">Available to everyone</span>
+            </div>
+            <h4>Copy &amp; paste workflow</h4>
+            <p>
+              Officers open the agent in Copilot Chat, paste the incoming FOI
+              email in, and get back a triage classification plus a draft
+              response. They copy the draft back into Outlook to send.
+            </p>
+            <ul class="experience-list">
+              <li>Works on any Copilot Basic licence</li>
+              <li>No additional rollout or admin work</li>
+              <li>Great starting point &mdash; prove value before upgrading</li>
+            </ul>
+          </div>
+          <div class="experience experience-premium">
+            <div class="experience-product" aria-hidden="true">
+              <svg viewBox="0 0 32 30" class="experience-combo"><rect x="2" y="4" width="28" height="22" rx="3" fill="#0078d4"/><path d="M2 6 L16 17 L30 6" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><text x="16" y="23" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="7" font-weight="700" fill="#fff">Outlook</text></svg>
+              <span>Copilot in Outlook</span>
+            </div>
+            <div class="experience-header">
+              <span class="experience-license">Copilot <strong>Premium</strong></span>
+              <span class="experience-tag tag-premium">Unified in&nbsp;Outlook</span>
+            </div>
+            <h4>The agent comes to the work</h4>
+            <p>
+              With a Premium licence the agent is available <em>inside
+              Outlook</em>. The FOI email is already in context &mdash; one
+              click triages, classifies and drops a draft reply straight into
+              the compose window. No copy-paste, no switching apps.
+            </p>
+            <ul class="experience-list">
+              <li>Triage and draft from the email itself</li>
+              <li>Drafted reply lands in Outlook ready to review</li>
+              <li>Lowest friction for high-volume teams</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <h2>The FOI process</h2>
+        <h2>The Process</h2>
         <p class="section-lead">
           We break a typical FOI workflow into three stages. Copilot is well
           suited to stages 1 and 3 &mdash; the parts that involve reading
           guidance and drafting language. Stage 2 stays with your people,
           because it needs access to data that the requester (and Copilot
-          acting on their behalf) doesn&rsquo;t have.
+          acting on their behalf) doesn&rsquo;t have. The timings below come
+          from research with councils and police forces and reflect what a
+          seasoned Public Access colleague typically spends on each stage.
         </p>
 
         <div class="foi-flow" aria-label="FOI process diagram">
           <div class="foi-flow-stages">
             <div class="stage triage">
+              <div class="stage-icon" aria-hidden="true">
+                <svg viewBox="0 0 36 36"><defs><linearGradient id="sg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0078d4"/><stop offset="1" stop-color="#50e6ff"/></linearGradient></defs><rect x="4" y="8" width="24" height="18" rx="3" fill="#fff" stroke="#0078d4" stroke-width="1.5"/><path d="M4 10 L16 19 L28 10" fill="none" stroke="#0078d4" stroke-width="1.5" stroke-linejoin="round"/><path d="M27 4 L28.6 8.4 L33 10 L28.6 11.6 L27 16 L25.4 11.6 L21 10 L25.4 8.4 Z" fill="url(#sg1)"/></svg>
+              </div>
               <div class="num">Stage 1</div>
               <h3>Triage request</h3>
               <p>Check the request against ICO and sector guidance. Identify exemptions, PII, vexatious or overly broad asks.</p>
+              <div class="stage-time" aria-label="Typical time for stage 1">
+                <span class="stage-time-value">~20 mins</span>
+                <span class="stage-time-label">per request</span>
+              </div>
+              <ul class="stage-tasks">
+                <li>Decide if it&rsquo;s an FOI, SAR or something else</li>
+                <li>Route to the correct team</li>
+                <li>Apply any exemptions</li>
+                <li>Check if it&rsquo;s already been answered</li>
+              </ul>
+              <div class="stage-stat" role="note">
+                <span class="stage-stat-value">45%</span>
+                <span class="stage-stat-label">of police FOIs can be exempted at triage</span>
+              </div>
               <span class="stage-badge">Semi-automated by the agent</span>
             </div>
             <div class="arrow" aria-hidden="true">&rarr;</div>
             <div class="stage action">
+              <div class="stage-icon" aria-hidden="true">
+                <svg viewBox="0 0 36 36"><circle cx="12" cy="13" r="4" fill="#fff" stroke="#7c3aed" stroke-width="1.5"/><circle cx="24" cy="13" r="4" fill="#fff" stroke="#7c3aed" stroke-width="1.5"/><path d="M5 26 C5 22 8 20 12 20 C16 20 19 22 19 26" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/><path d="M17 26 C17 22 20 20 24 20 C28 20 31 22 31 26" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
               <div class="num">Stage 2</div>
               <h3>Action request</h3>
               <p>Gather information across the organisation. Requires privileged access far beyond a single user&rsquo;s permissions.</p>
+              <div class="stage-time" aria-label="Typical time for stage 2">
+                <span class="stage-time-value">~3 hours</span>
+                <span class="stage-time-label">weighted average</span>
+              </div>
+              <ul class="stage-tasks">
+                <li>Researching and finding all the data</li>
+                <li>Highly variable &mdash; some asks are easy, some are hard</li>
+                <li>Average weighted across easy / medium / hard requests</li>
+              </ul>
               <span class="stage-badge">Stays manual &mdash; handed to FOI team</span>
             </div>
             <div class="arrow" aria-hidden="true">&rarr;</div>
             <div class="stage respond">
+              <div class="stage-icon" aria-hidden="true">
+                <svg viewBox="0 0 36 36"><defs><linearGradient id="sg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b768d6"/><stop offset="1" stop-color="#ff5cad"/></linearGradient></defs><path d="M4 18 L32 6 L26 32 L18 22 L4 18 Z" fill="#fff" stroke="#b768d6" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 22 L26 12" fill="none" stroke="#b768d6" stroke-width="1.5"/><path d="M30 4 L31 7 L34 8 L31 9 L30 12 L29 9 L26 8 L29 7 Z" fill="url(#sg3)"/></svg>
+              </div>
               <div class="num">Stage 3</div>
               <h3>Respond to citizen</h3>
               <p>Draft a clear, compliant reply &mdash; whether accepting, refusing, or asking for clarification.</p>
+              <div class="stage-time" aria-label="Typical time for stage 3">
+                <span class="stage-time-value">~1 hour</span>
+                <span class="stage-time-label">per response</span>
+              </div>
+              <ul class="stage-tasks">
+                <li>Collate all the data gathered in stage 2</li>
+                <li>Write the response</li>
+                <li>Any redaction required</li>
+                <li>Approval where needed</li>
+                <li>Paperwork &mdash; recording the response</li>
+              </ul>
               <span class="stage-badge">Semi-automated by the agent</span>
             </div>
           </div>
@@ -111,6 +326,142 @@
       </div>
     </section>
 
+    <section id="savings-calculator">
+      <div class="container">
+        <h2>What could that save your team?</h2>
+        <p class="section-lead">
+          A back-of-the-envelope estimate. Plug in your own numbers &mdash;
+          they&rsquo;re pre-populated with the figures from the FOI process
+          above. Stage 2 stays with your people, but the agent shoulders
+          stages&nbsp;1 and 3, and exempted requests skip stage&nbsp;2 entirely.
+        </p>
+
+        <div class="calc">
+          <form class="calc-inputs" id="savings-form" onsubmit="return false;">
+            <label>
+              <span class="calc-label">FOIs &amp; SARs per year</span>
+              <input type="number" id="calc-volume" min="0" step="10" value="1000" />
+            </label>
+            <label>
+              <span class="calc-label">% exempted at triage</span>
+              <div class="calc-suffix-wrap">
+                <input type="number" id="calc-exempt" min="0" max="100" step="1" value="45" />
+                <span class="calc-suffix">%</span>
+              </div>
+            </label>
+            <label>
+              <span class="calc-label">Stage 1 &mdash; Triage</span>
+              <div class="calc-suffix-wrap">
+                <input type="number" id="calc-s1" min="0" step="1" value="20" />
+                <span class="calc-suffix">mins</span>
+              </div>
+            </label>
+            <label>
+              <span class="calc-label">Stage 2 &mdash; Action</span>
+              <div class="calc-suffix-wrap">
+                <input type="number" id="calc-s2" min="0" step="0.25" value="3" />
+                <span class="calc-suffix">hours</span>
+              </div>
+            </label>
+            <label>
+              <span class="calc-label">Stage 3 &mdash; Respond</span>
+              <div class="calc-suffix-wrap">
+                <input type="number" id="calc-s3" min="0" step="0.25" value="1" />
+                <span class="calc-suffix">hours</span>
+              </div>
+            </label>
+            <label>
+              <span class="calc-label">Agent efficiency on stages&nbsp;1 &amp; 3</span>
+              <div class="calc-suffix-wrap">
+                <input type="number" id="calc-eff" min="0" max="100" step="5" value="80" />
+                <span class="calc-suffix">%</span>
+              </div>
+            </label>
+          </form>
+
+          <div class="calc-output" aria-live="polite">
+            <div class="calc-headline">
+              <span class="calc-headline-value" id="calc-total-hours">&mdash;</span>
+              <span class="calc-headline-label">hours saved per year</span>
+            </div>
+            <ul class="calc-breakdown">
+              <li>
+                <span class="calc-row-label">Triage automated by the agent</span>
+                <span class="calc-row-value" id="calc-s1-hours">&mdash;</span>
+              </li>
+              <li>
+                <span class="calc-row-label">Response drafting automated by the agent</span>
+                <span class="calc-row-value" id="calc-s3-hours">&mdash;</span>
+              </li>
+              <li>
+                <span class="calc-row-label">Stage 2 avoided on exempted requests</span>
+                <span class="calc-row-value" id="calc-s2-hours">&mdash;</span>
+              </li>
+            </ul>
+            <p class="calc-disclaimer">
+              Indicative only. Actual savings depend on case mix, your existing
+              tooling, and how you choose to deploy the agent. Treat this as a
+              conversation starter with your FOI team, not a procurement
+              business case.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="other-benefits">
+      <div class="container">
+        <h2>Other benefits</h2>
+        <p class="section-lead">
+          The headline savings are the easiest number to defend in a business
+          case &mdash; but they&rsquo;re rarely the most important thing the
+          agent gives you. The compounding wins sit elsewhere.
+        </p>
+        <div class="grid benefits-grid">
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#8593;</span>
+            <h3>More exemptions caught</h3>
+            <p>Consistent application of guidance lifts the exemption rate &mdash; fewer requests fall through to a costly stage&nbsp;2.</p>
+          </div>
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#9201;</span>
+            <h3>Faster turnaround</h3>
+            <p>Triage and a draft response are ready within minutes, not days. Statutory deadlines stop being a scramble.</p>
+          </div>
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#9776;</span>
+            <h3>Consistent decisions</h3>
+            <p>Every request is judged against the same guidance, the same way &mdash; reducing ICO appeal risk and audit findings.</p>
+          </div>
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#8644;</span>
+            <h3>Better routing</h3>
+            <p>Requests reach the right team first time. Less internal forwarding, fewer dropped balls between services.</p>
+          </div>
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#127919;</span>
+            <h3>Reinvest the time</h3>
+            <p>Hours released from routine triage go back into the hard cases &mdash; the ones that actually need a human.</p>
+          </div>
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#128214;</span>
+            <h3>Guidance stays current</h3>
+            <p>Point the agent at ICO and sector guidance. When that guidance changes, behaviour changes &mdash; no retraining cycle.</p>
+          </div>
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#129504;</span>
+            <h3>AI &amp; agent literacy</h3>
+            <p>Your team builds practical, hands-on experience with the tools they&rsquo;ll be using across the rest of the organisation.</p>
+          </div>
+          <div class="card benefit">
+            <span class="benefit-icon" aria-hidden="true">&#9733;</span>
+            <h3>Happier citizens</h3>
+            <p>Quicker, clearer, more predictable responses &mdash; the public-facing measure leadership actually cares about.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="container">
         <h2>What you&rsquo;ll leave with</h2>
@@ -124,39 +475,42 @@
             <p>Instructions, starter prompts and knowledge sources tailored for UK public sector FOI work.</p>
           </div>
           <div class="card">
-            <h3>A repeatable pattern</h3>
-            <p>The triage &rarr; hand-off &rarr; draft pattern applies to SARs, complaints, and many other inbound flows.</p>
+            <h3>A pattern you can reuse anywhere</h3>
+            <p>
+              <strong>Request in &rarr; check guidance &rarr; reply.</strong>
+              Works for SARs, complaints, councillor enquiries, planning,
+              licensing, HR &mdash; build it once, reuse it everywhere.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Agenda</h2>
-        <table>
-          <thead>
-            <tr><th style="width:120px">Time</th><th>Session</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>00:00</td><td>Welcome &amp; the FOI landscape in 2026</td></tr>
-            <tr><td>00:10</td><td>The three-stage FOI process &mdash; where Copilot fits</td></tr>
-            <tr><td>00:20</td><td>Live build: create the agent in Copilot Agent Builder</td></tr>
-            <tr><td>00:40</td><td>Live build: add knowledge sources (ICO, sector guidance)</td></tr>
-            <tr><td>00:55</td><td>Live build: triage instructions &amp; response drafting</td></tr>
-            <tr><td>01:15</td><td>Test against sample FOI requests</td></tr>
-            <tr><td>01:30</td><td>Deployment, governance and Q&amp;A</td></tr>
-          </tbody>
-        </table>
-        <p class="text-muted mt-2">Times are indicative. The full build guide is on the <a href="build.html">Build the agent</a> page so you can work through it at your own pace.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div>FOI Agent Webinar &middot; Companion site</div>
-      <div>Built for UK public sector teams &middot; <a href="resources.html">Resources</a></div>
+      <div class="footer-brand">
+        <svg class="ms-logo" viewBox="0 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
+          <rect x="12" y="1" width="9" height="9" fill="#7fba00"/>
+          <rect x="1" y="12" width="9" height="9" fill="#00a4ef"/>
+          <rect x="12" y="12" width="9" height="9" fill="#ffb900"/>
+        </svg>
+        <span>Built on Microsoft 365</span>
+        <span class="footer-sep">&amp;</span>
+        <svg class="copilot-logo" viewBox="0 0 30 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ft-cp-l" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#26c6f9"/><stop offset="1" stop-color="#5b3fd9"/></linearGradient>
+            <linearGradient id="ft-cp-r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b768d6"/><stop offset=".6" stop-color="#f25022"/><stop offset="1" stop-color="#ffb900"/></linearGradient>
+          </defs>
+          <g transform="translate(1 0)">
+            <path d="M14 0 C6 0 1 6 1 12 C1 18 6 24 14 24 L17 24 C19 24 19 20 17 20 L15.5 20 C10 20 6 16 6 12 C6 8 10 4 15.5 4 L17 4 C19 4 19 0 17 0 Z" fill="url(#ft-cp-l)"/>
+            <path d="M14 0 C22 0 27 6 27 12 C27 18 22 24 14 24 L11 24 C9 24 9 20 11 20 L12.5 20 C18 20 22 16 22 12 C22 8 18 4 12.5 4 L11 4 C9 4 9 0 11 0 Z" fill="url(#ft-cp-r)"/>
+          </g>
+        </svg>
+        <span>Copilot</span>
+      </div>
+      <div>FOI Agent Webinar &middot; Companion site &middot; <a href="resources.html">Resources</a></div>
     </div>
   </footer>
 

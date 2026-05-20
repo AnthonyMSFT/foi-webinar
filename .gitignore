@@ -1,3 +1,9 @@
 node_modules/
 .vscode/
 *.log
+# Local-only design exploration; not for publishing to GitHub Pages
+variations/
+
+
+# Raw screen recording source (encoded versions live in assets/video)
+Recording*.mp4
