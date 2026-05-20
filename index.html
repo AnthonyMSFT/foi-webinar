@@ -49,8 +49,8 @@
             <a class="btn btn-ghost" href="resources.html">Browse resources</a>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 440 380" xmlns="http://www.w3.org/2000/svg">
+        <div class="hero-visual" aria-hidden="false">
+          <svg viewBox="0 0 440 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FOI agent flow: Outlook inbox, Copilot, draft response — and a QR code to https://aka.ms/foi-webinar">
             <defs>
               <linearGradient id="cp-left" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stop-color="#26c6f9"/>
@@ -67,56 +67,70 @@
                 <stop offset="1" stop-color="#003a78"/>
               </linearGradient>
               <radialGradient id="hv-glow" cx=".5" cy=".5" r=".5">
-                <stop offset="0" stop-color="#b768d6" stop-opacity=".35"/>
+                <stop offset="0" stop-color="#b768d6" stop-opacity=".30"/>
                 <stop offset="1" stop-color="#b768d6" stop-opacity="0"/>
               </radialGradient>
               <filter id="hv-shadow" x="-20%" y="-20%" width="140%" height="140%">
                 <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0b1f3a" flood-opacity=".18"/>
               </filter>
+              <filter id="hv-qr-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0b1f3a" flood-opacity=".14"/>
+              </filter>
             </defs>
-            <circle cx="220" cy="180" r="170" fill="url(#hv-glow)"/>
-            <!-- Copilot ribbon mark, centred (official Microsoft Copilot logo) -->
-            <image href="assets/img/copilot-color.png" x="140" y="80" width="160" height="160" preserveAspectRatio="xMidYMid meet"/>
-            <!-- Outlook envelope, small, bottom-left -->
-            <g transform="translate(28 232)" filter="url(#hv-shadow)">
-              <rect x="0" y="0" width="118" height="86" rx="12" fill="#fff" stroke="#dde5f0"/>
-              <rect x="0" y="0" width="118" height="24" rx="12" fill="url(#hv-outlook)"/>
-              <rect x="0" y="12" width="118" height="12" fill="url(#hv-outlook)"/>
-              <text x="59" y="17" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="9" font-weight="700" fill="#fff" letter-spacing=".5">OUTLOOK</text>
-              <rect x="10" y="34" width="98" height="42" rx="6" fill="#eaf3fb" stroke="#cfe2f3"/>
-              <circle cx="22" cy="55" r="8" fill="#0078d4"/>
-              <text x="22" y="58" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="8" font-weight="700" fill="#fff">JM</text>
-              <rect x="36" y="44" width="60" height="5" rx="2.5" fill="#0b1f3a"/>
-              <rect x="36" y="54" width="68" height="4" rx="2" fill="#6b7a90"/>
-              <rect x="36" y="63" width="50" height="4" rx="2" fill="#a8b3c4"/>
+
+            <!-- Soft pink glow centred -->
+            <circle cx="220" cy="190" r="180" fill="url(#hv-glow)"/>
+
+            <!-- Copilot ribbon, top-left -->
+            <image href="assets/img/copilot-color.png" x="24" y="24" width="140" height="140" preserveAspectRatio="xMidYMid meet"/>
+
+            <!-- QR card, top-right, hyperlinked -->
+            <a href="https://aka.ms/foi-webinar/" target="_blank" rel="noopener noreferrer" aria-label="Open https://aka.ms/foi-webinar">
+              <g filter="url(#hv-qr-shadow)">
+                <rect x="230" y="14" width="196" height="206" rx="16" fill="#fff" stroke="#dde5f0"/>
+                <image href="assets/img/foi-webinar-qr.png" x="242" y="26" width="172" height="172"/>
+                <text x="328" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1746b8">aka.ms/foi-webinar</text>
+              </g>
+            </a>
+
+            <!-- Outlook envelope, bottom-left -->
+            <g transform="translate(24 246)" filter="url(#hv-shadow)">
+              <rect x="0" y="0" width="130" height="94" rx="12" fill="#fff" stroke="#dde5f0"/>
+              <rect x="0" y="0" width="130" height="26" rx="12" fill="url(#hv-outlook)"/>
+              <rect x="0" y="13" width="130" height="13" fill="url(#hv-outlook)"/>
+              <text x="65" y="18" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" font-weight="700" fill="#fff" letter-spacing=".5">OUTLOOK</text>
+              <rect x="10" y="36" width="110" height="48" rx="6" fill="#eaf3fb" stroke="#cfe2f3"/>
+              <circle cx="24" cy="60" r="9" fill="#0078d4"/>
+              <text x="24" y="63" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" font-weight="700" fill="#fff">JM</text>
+              <rect x="40" y="48" width="66" height="5" rx="2.5" fill="#0b1f3a"/>
+              <rect x="40" y="58" width="74" height="4" rx="2" fill="#6b7a90"/>
+              <rect x="40" y="67" width="56" height="4" rx="2" fill="#a8b3c4"/>
             </g>
+
             <!-- Draft response card, bottom-right -->
-            <g transform="translate(300 244)" filter="url(#hv-shadow)">
-              <rect x="0" y="0" width="118" height="74" rx="12" fill="#fff" stroke="#dde5f0"/>
-              <rect x="10" y="12" width="42" height="10" rx="5" fill="#0e7c4a"/>
-              <text x="31" y="20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="7" font-weight="700" fill="#fff">RESPOND</text>
-              <rect x="10" y="32" width="96" height="4" rx="2" fill="#0b1f3a"/>
-              <rect x="10" y="42" width="98" height="3" rx="1.5" fill="#6b7a90"/>
-              <rect x="10" y="50" width="86" height="3" rx="1.5" fill="#6b7a90"/>
-              <rect x="10" y="58" width="72" height="3" rx="1.5" fill="#6b7a90"/>
+            <g transform="translate(286 258)" filter="url(#hv-shadow)">
+              <rect x="0" y="0" width="130" height="82" rx="12" fill="#fff" stroke="#dde5f0"/>
+              <rect x="10" y="12" width="48" height="12" rx="6" fill="#0e7c4a"/>
+              <text x="34" y="21" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="8" font-weight="700" fill="#fff">RESPOND</text>
+              <rect x="10" y="34" width="110" height="5" rx="2.5" fill="#0b1f3a"/>
+              <rect x="10" y="46" width="112" height="4" rx="2" fill="#6b7a90"/>
+              <rect x="10" y="55" width="98" height="4" rx="2" fill="#6b7a90"/>
+              <rect x="10" y="64" width="80" height="4" rx="2" fill="#6b7a90"/>
             </g>
-            <!-- Connecting arcs from envelope -> copilot -> draft -->
-            <path d="M150 250 Q200 220 200 200" stroke="url(#cp-left)" stroke-width="2.5" fill="none" stroke-dasharray="5 5" stroke-linecap="round"/>
-            <path d="M280 200 Q290 230 296 252" stroke="url(#cp-right)" stroke-width="2.5" fill="none" stroke-dasharray="5 5" stroke-linecap="round"/>
+
+            <!-- Connecting arcs: Outlook → Copilot → QR → Respond -->
+            <path d="M90 246 Q 80 200 92 168" stroke="url(#cp-left)" stroke-width="2.5" fill="none" stroke-dasharray="5 5" stroke-linecap="round"/>
+            <path d="M164 90 Q 200 60 236 100" stroke="url(#cp-right)" stroke-width="2.5" fill="none" stroke-dasharray="5 5" stroke-linecap="round"/>
+            <path d="M340 222 Q 348 244 348 258" stroke="url(#cp-right)" stroke-width="2.5" fill="none" stroke-dasharray="5 5" stroke-linecap="round"/>
+
             <!-- Sparkles -->
             <g>
-              <path d="M104 78 L108 90 L120 94 L108 98 L104 110 L100 98 L88 94 L100 90 Z" fill="url(#cp-left)"/>
-              <path d="M348 92 L351 100 L359 103 L351 106 L348 114 L345 106 L337 103 L345 100 Z" fill="url(#cp-right)" opacity=".85"/>
-              <path d="M388 200 L390 206 L396 208 L390 210 L388 216 L386 210 L380 208 L386 206 Z" fill="url(#cp-right)" opacity=".7"/>
+              <path d="M196 196 L200 208 L212 212 L200 216 L196 228 L192 216 L180 212 L192 208 Z" fill="url(#cp-left)" opacity=".85"/>
+              <path d="M174 154 L176 160 L182 162 L176 164 L174 170 L172 164 L166 162 L172 160 Z" fill="url(#cp-right)" opacity=".7"/>
+              <path d="M256 232 L259 240 L267 243 L259 246 L256 254 L253 246 L245 243 L253 240 Z" fill="url(#cp-right)" opacity=".75"/>
             </g>
           </svg>
         </div>
-        <a class="hero-qr" href="https://aka.ms/foi-webinar/" aria-label="Open the FOI webinar link">
-          <img src="assets/img/foi-webinar-qr.png" alt="QR code linking to https://aka.ms/foi-webinar/" />
-          <div class="hero-qr-meta">
-            <span class="hero-qr-url">https://aka.ms/foi-webinar</span>
-          </div>
-        </a>
       </div>
     </section>
 
