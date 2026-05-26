@@ -291,32 +291,6 @@ Mark Davies</div>
           <article class="step" id="step-14">
             <div class="step-num">14</div>
             <div>
-              <h3>Sign the draft off properly</h3>
-              <p>The drafts read like they were written by &ldquo;the agent&rdquo; rather than by an officer at the department. One more instruction fixes that, so each reply comes back signed off and ready to copy into Outlook with only minor edits.</p>
-              <p>Back in the <strong>Conversation</strong> tab, paste this &mdash; substituting your own role and department if you want to make it real:</p>
-              <div class="prompt" data-copy="When drafting an email response you should use my name, my role which is Public Access Officer and the Department name which is Department of Copilot and AI.">When drafting an email response you should use my name, my role which is Public Access Officer and the Department name which is Department of Copilot and AI.</div>
-              <figure class="step-figure">
-                <img src="assets/img/Instruction6-annotated.png" alt="Agent Builder Conversation tab with the sign-off instruction typed into the highlighted chat input on the left, and the Configure pane on the right showing the existing Instructions" decoding="async" />
-              </figure>
-              <p>From now on, every drafted reply will close with the right name, role and department &mdash; no more &ldquo;[Your Name]&rdquo; placeholders for the officer to remember to fill in.</p>
-            </div>
-          </article>
-
-          <article class="step" id="step-15">
-            <div class="step-num">15</div>
-            <div>
-              <h3>Test the signed-off draft</h3>
-              <p>One last clean run-through. Click back over to <strong>Try It</strong>, start a <strong>New chat</strong>, hit the <strong>Triage</strong> prompt, paste the exempt request from step 11, then reply <strong>yes</strong> when the agent offers to draft a response.</p>
-              <figure class="step-figure">
-                <img src="assets/img/Instruction7.png" alt="Try It tab showing the full chained reply: the Triage classification, the follow-on offer to draft a reply, the user replying yes, and the agent producing a polite refusal letter signed off with the officer's name, Public Access Officer and Department of Copilot and AI" decoding="async" />
-              </figure>
-              <p>The drafted refusal letter now closes with the officer&rsquo;s name, their role and the department &mdash; ready to copy into Outlook with only a quick read-through. That&rsquo;s the whole loop: an FOI lands, one click triages it, one word drafts the reply, and the reply already sounds like it came from a real person at a real department.</p>
-            </div>
-          </article>
-
-          <article class="step" id="step-16">
-            <div class="step-num">16</div>
-            <div>
               <h3>Press Create to deploy</h3>
               <p>The prompts are in place and the test responses are behaving &mdash; you&rsquo;re done in Agent Builder. Hit the <strong>Create</strong> button in the top-right corner.</p>
               <figure class="step-figure">
@@ -326,83 +300,205 @@ Mark Davies</div>
             </div>
           </article>
 
+          <article class="step" id="step-15">
+            <div class="step-num">15</div>
+            <div>
+              <h3>Open the published agent</h3>
+              <p>A confirmation dialog will pop up letting you know the agent has been created. By default it&rsquo;s <strong>private</strong> &mdash; only available to you &mdash; which is exactly what you want while you&rsquo;re still polishing it. Click <strong>Go to agent</strong> to jump straight into it.</p>
+              <figure class="step-figure">
+                <img src="assets/img/Published.png" alt="Your agent was created successfully dialog showing the agent is currently private and only available to you, with Go to agent and Share buttons" decoding="async" />
+              </figure>
+              <p>When you&rsquo;re ready to roll it out more widely, the <strong>Share</strong> button on this same dialog is how you make it available to the rest of the team &mdash; but that&rsquo;s a conversation for the live session.</p>
+            </div>
+          </article>
+
+          <article class="step" id="step-16">
+            <div class="step-num">16</div>
+            <div>
+              <h3>Test it in the Copilot app</h3>
+              <p>Now you&rsquo;re looking at the agent exactly the way every other officer will see it &mdash; in the Microsoft 365 Copilot app, not in Agent Builder. Open the FOI mailbox in Outlook, copy the next incoming request, and paste it into the agent underneath the <strong>Triage</strong> starter prompt. The agent will classify it and offer to draft a reply &mdash; answer <strong>yes</strong>, then copy the draft straight back into a reply in Outlook.</p>
+              <figure class="step-figure">
+                <img src="assets/img/CPTest1.png" alt="The deployed FOI Request Triage Agent running inside the Microsoft 365 Copilot app, showing a triaged email classified as Exempt with the agent's follow-on draft refusal letter ready to copy back into Outlook" decoding="async" />
+              </figure>
+            </div>
+          </article>
+
+          <article class="step" id="step-17">
+            <div class="step-num">17</div>
+            <div>
+              <h3>Test it in Outlook &mdash; where your colleagues actually live</h3>
+              <p>Once an agent is published, <strong>Copilot Premium</strong> users will see it in the Copilot pane inside every Office app &mdash; Word, Excel, PowerPoint and so on. <strong>Copilot Basic</strong> users will only see it in Outlook, but for this agent that&rsquo;s all we need.</p>
+              <p>Go to Outlook and click the <strong>Copilot</strong> button in the top-right corner to open the Copilot pane. Then click the <strong>Copilot menu</strong> button at the top of the pane and pick your agent from the list.</p>
+              <figure class="step-figure">
+                <img src="assets/img/Outlook2-annotated.png" alt="Outlook with the Copilot pane open and the agent menu expanded, showing the top-right Copilot toolbar button, the Copilot menu button at the top of the pane and the FOI Request Triage Agent row in the dropdown all highlighted" decoding="async" />
+              </figure>
+              <p>Now select the email you want to triage and click <strong>Triage this email</strong>. Congratulations &mdash; you&rsquo;ve just replied to a citizen FOI request using your own agent, without ever leaving the inbox.</p>
+            </div>
+          </article>
+
+          <article class="step" id="step-18">
+            <div class="step-num">18</div>
+            <div>
+              <h3>Share the agent with your colleagues</h3>
+              <p>The agent is only useful to your team once they can find it. In the Copilot app sidebar, hover over your agent and click the <strong>&hellip;</strong> menu next to its name, then choose <strong>Share</strong>.</p>
+              <figure class="step-figure">
+                <img src="assets/img/Share1-annotated.png" alt="The Microsoft 365 Copilot app sidebar with the FOI Request Triage Agent pinned, the three-dots context menu button and the Share option in the resulting dropdown both highlighted" decoding="async" />
+              </figure>
+              <p>In the share dialog, pick <strong>Specific users in your organization</strong>, start typing a colleague&rsquo;s name in the search box, and click their name when it appears in the suggestions.</p>
+              <figure class="step-figure">
+                <img src="assets/img/Share2-annotated.png" alt="The Share dialog for the FOI Request Triage Agent with &lsquo;amber&rsquo; typed into the people search box and Amber Rodriguez surfaced as a matching colleague, both the search box and the suggested person row highlighted" decoding="async" />
+              </figure>
+              <p>Paste in the names or distribution list of the colleagues you want to give it to, add a short note explaining what the agent does, and send. They&rsquo;ll get a link that drops the agent straight into their own Copilot sidebar &mdash; no install steps, no training required.</p>
+            </div>
+          </article>
+
         </div>
+      </div>
+    </section>
+
+    <section id="wear-it-with-pride">
+      <div class="container">
+        <h2>Wear it with pride</h2>
+        <p class="section-lead">You shipped an agent your colleagues actually use. Grab the badge and stick it on your email signature, your Teams profile, or anywhere else people will see it.</p>
+        <figure class="badge-figure badge-figure--solo">
+          <img src="assets/img/copilot-agent-builder-badge.png" alt="An &lsquo;I am a Copilot Agent Builder&rsquo; coin badge with the Copilot rainbow ring surrounding a navy face" decoding="async" />
+          <figcaption>
+            <a class="badge-download" href="assets/img/copilot-agent-builder-badge.png" download="i-am-a-copilot-agent-builder.png">Download the badge</a>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="fastest-path">
       <div class="container">
         <h2>Fastest path to awesome</h2>
-        <p class="section-lead">Already comfortable in Agent Builder? Skip the explanations &mdash; paste these four prompts in order and you&rsquo;ll end up with the same working agent.</p>
+        <p class="section-lead">Already comfortable in Agent Builder? Skip the explanations and just paste the following into your new agent.</p>
 
-        <div class="steps">
+        <article class="fastest-pill">
 
-          <article class="step">
-            <div class="step-num">1</div>
-            <div>
-              <h3>Scaffold the agent</h3>
-              <p>Open Agent Builder (Copilot &rarr; <strong>Agents</strong> &rarr; <strong>New agent</strong>) and paste this into the chat box.</p>
-              <div class="prompt" data-copy="You are an agent for a fictitious UK government department called the Department for Copilot and AI. You help officers handle Freedom of Information (FOI) requests.
+          <section class="fastest-field">
+            <h3>Name</h3>
+            <div class="prompt" data-copy="FOI Request Triage Agent">FOI Request Triage Agent</div>
+          </section>
 
-When I give you an email, decide whether it's an FOI request, then check the Information Commissioner's Office guidance and tell me whether the department should respond or if the request is exempt.">You are an agent for a fictitious UK government department called the Department for Copilot and AI. You help officers handle Freedom of Information (FOI) requests.<br /><br />
-When I give you an email, decide whether it&rsquo;s an FOI request, then check the Information Commissioner&rsquo;s Office guidance and tell me whether the department should respond or if the request is exempt.</div>
-            </div>
-          </article>
+          <section class="fastest-field">
+            <h3>Description</h3>
+            <div class="prompt" data-copy="This agent assists officers in the Department for Copilot and AI by handling incoming emails related to Freedom of Information (FOI) requests. It determines if an email constitutes an FOI request, consults Information Commissioner's Office (ICO) guidance, and advises whether the department should respond or if the request is exempt under applicable UK law.">This agent assists officers in the Department for Copilot and AI by handling incoming emails related to Freedom of Information (FOI) requests. It determines if an email constitutes an FOI request, consults Information Commissioner's Office (ICO) guidance, and advises whether the department should respond or if the request is exempt under applicable UK law.</div>
+          </section>
 
-          <article class="step">
-            <div class="step-num">2</div>
-            <div>
-              <h3>Tighten the reply format</h3>
-              <p>Stay on the <strong>Conversation</strong> tab and paste this to lock the agent to a three-line response.</p>
-              <div class="prompt" data-copy="Use the following format when triaging emails. Do not give any more information. I only want the following 3 lines.
+          <section class="fastest-field">
+            <h3>Instructions</h3>
+            <div class="prompt" data-copy="# Purpose
+Support officers by classifying emails as FOI requests, Subject Access Requests (SAR), or Other, then provide action status and concise justification according to ICO guidance.
+
+## Classification and Response Guidelines
+- Review each email for clear FOI or SAR indicators.
+- Consult ICO guidance for exemption criteria.
+- Provide only the following 3 lines per request:
 
 **Classification:** FOI | SAR | Other
 **Action:** Action | Exempt
-**Justification:** One short paragraph, no more than 50 words, explaining the decision.">Use the following format when triaging emails. Do not give any more information. I only want the following 3 lines.<br /><br />
-<strong>Classification:</strong> FOI | SAR | Other<br />
-<strong>Action:</strong> Action | Exempt<br />
-<strong>Justification:</strong> One short paragraph, no more than 50 words, explaining the decision.</div>
-            </div>
-          </article>
+**Justification:** One short paragraph, no more than 50 words, explaining the decision.
 
-          <article class="step">
-            <div class="step-num">3</div>
-            <div>
-              <h3>Test a valid FOI request</h3>
-              <p>Switch to <strong>Try It</strong>, click the first suggested prompt, then paste this email after it. Expect <strong>Classification: FOI</strong> and <strong>Action: Action</strong>.</p>
-              <div class="prompt" data-copy="Hello,
+- After these lines, insert a blank line, then ask: &quot;Would you like me to draft a reply to the requester?&quot;
 
-I'd like to request the following recorded information held by your organisation: the total spend on external legal advice for the financial year 2024/25, broken down by month and, if possible, by the department or service area that commissioned the advice.
+## Skills
+- Identify request types from email content.
+- Determine if action is required or exempt.
+- Summarize justification in &le;50 words.
 
-A spreadsheet would be ideal.
+## Drafting Email Response
+- When drafting an email response, use the officer's name, role (Public Access Officer), and department (Department of Copilot and AI) in the signature.
 
-Many thanks,
-Jane Smith">Hello,<br /><br />
-I&rsquo;d like to request the following recorded information held by your organisation: the total spend on external legal advice for the financial year 2024/25, broken down by month and, if possible, by the department or service area that commissioned the advice.<br /><br />
-A spreadsheet would be ideal.<br /><br />
-Many thanks,<br />
-Jane Smith</div>
-            </div>
-          </article>
+## Workflow
+1. Read email and classify: FOI, SAR, or Other.
+2. Consult ICO guidance for possible exemptions.
+3. Provide action status and brief justification (&le;50 words).
+4. After triaging, always offer to draft a reply to the requester as a follow-on prompt, with a line gap between outputs.
 
-          <article class="step">
-            <div class="step-num">4</div>
-            <div>
-              <h3>Test an exempt request</h3>
-              <p>Start a <strong>New chat</strong> in <strong>Try It</strong>, click the first suggested prompt, then paste this. Expect <strong>Classification: FOI</strong> and <strong>Action: Exempt</strong>, citing personal data (FOIA s.40(2)).</p>
-              <div class="prompt" data-copy="Hello,
+## Example Output
+**Classification:** FOI
+**Action:** Action
+**Justification:** The requester seeks recorded information on legal spending, which falls under FOI and should be disclosed unless an exemption applies.
 
-Under the Freedom of Information Act, please send me a copy of the personnel file, performance reviews and current salary for your Chief Data Officer, Sarah Johnson. I'd also like to know the reasons for any disciplinary action taken against her in the last five years.
+Would you like me to draft a reply to the requester?
 
-Thanks,
-Mark Davies">Hello,<br /><br />
-Under the Freedom of Information Act, please send me a copy of the personnel file, performance reviews and current salary for your Chief Data Officer, Sarah Johnson. I&rsquo;d also like to know the reasons for any disciplinary action taken against her in the last five years.<br /><br />
-Thanks,<br />
-Mark Davies</div>
-            </div>
-          </article>
+## Restrictions
+- Do not provide extra information or advice. Only output the three specified lines and the follow-on prompt.
+- If information is insufficient, classify as Other and request clarification.
 
-        </div>
+## Closing
+- Invite officers to submit more emails for triage if needed.
+- After triaging, always offer to draft a response to the requester with a line gap between outputs."># Purpose
+Support officers by classifying emails as FOI requests, Subject Access Requests (SAR), or Other, then provide action status and concise justification according to ICO guidance.
+
+## Classification and Response Guidelines
+- Review each email for clear FOI or SAR indicators.
+- Consult ICO guidance for exemption criteria.
+- Provide only the following 3 lines per request:
+
+**Classification:** FOI | SAR | Other
+**Action:** Action | Exempt
+**Justification:** One short paragraph, no more than 50 words, explaining the decision.
+
+- After these lines, insert a blank line, then ask: "Would you like me to draft a reply to the requester?"
+
+## Skills
+- Identify request types from email content.
+- Determine if action is required or exempt.
+- Summarize justification in &le;50 words.
+
+## Drafting Email Response
+- When drafting an email response, use the officer's name, role (Public Access Officer), and department (Department of Copilot and AI) in the signature.
+
+## Workflow
+1. Read email and classify: FOI, SAR, or Other.
+2. Consult ICO guidance for possible exemptions.
+3. Provide action status and brief justification (&le;50 words).
+4. After triaging, always offer to draft a reply to the requester as a follow-on prompt, with a line gap between outputs.
+
+## Example Output
+**Classification:** FOI
+**Action:** Action
+**Justification:** The requester seeks recorded information on legal spending, which falls under FOI and should be disclosed unless an exemption applies.
+
+Would you like me to draft a reply to the requester?
+
+## Restrictions
+- Do not provide extra information or advice. Only output the three specified lines and the follow-on prompt.
+- If information is insufficient, classify as Other and request clarification.
+
+## Closing
+- Invite officers to submit more emails for triage if needed.
+- After triaging, always offer to draft a response to the requester with a line gap between outputs.</div>
+          </section>
+
+          <section class="fastest-field">
+            <h3>Knowledge</h3>
+            <p>Pick your FOI guidance source from the <a href="resources.html">Resources</a> page and add it as the agent&rsquo;s knowledge.</p>
+            <ul class="config-list">
+              <li><span class="config-label">Search all websites</span> <span class="toggle toggle-off">Off</span></li>
+              <li><span class="config-label">Only use specified sources</span> <span class="toggle toggle-on">On</span></li>
+            </ul>
+          </section>
+
+          <section class="fastest-field">
+            <h3>Capabilities</h3>
+            <ul class="config-list">
+              <li><span class="config-label">Create documents, charts, and code</span> <span class="toggle toggle-off">Off</span></li>
+              <li><span class="config-label">Create images</span> <span class="toggle toggle-off">Off</span></li>
+            </ul>
+          </section>
+
+          <section class="fastest-field">
+            <h3>Suggested prompts</h3>
+            <ul class="config-list">
+              <li><span class="config-label">Triage</span> <span class="config-value">Triage this email.</span></li>
+              <li><span class="config-label">Respond</span> <span class="config-value">Draft a response to this request.</span></li>
+            </ul>
+          </section>
+
+        </article>
       </div>
     </section>
 
