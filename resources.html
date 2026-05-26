@@ -11,13 +11,18 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <svg class="brand-mark" viewBox="0 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
+          <rect x="12" y="1" width="9" height="9" fill="#7fba00"/>
+          <rect x="1" y="12" width="9" height="9" fill="#00a4ef"/>
+          <rect x="12" y="12" width="9" height="9" fill="#ffb900"/>
+        </svg>
         <span>FOI Agent Webinar</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Overview</a>
         <a href="build.html">Build the agent</a>
-        <a href="resources.html">Resources</a>
+        <a href="resources.html" class="active">Resources</a>
       </nav>
     </div>
   </header>
@@ -48,10 +53,10 @@
           </div>
           <div class="resource">
             <div>
-              <strong>Freedom of Information Act 2000 (legislation.gov.uk)</strong>
-              <div class="meta">The Act itself &mdash; useful for citing specific sections in agent responses.</div>
+              <strong>GOV.UK &mdash; How to make a freedom of information (FOI) request</strong>
+              <div class="meta">Plain-English overview of FOIA rights, what counts as a request, and how authorities handle them.</div>
             </div>
-            <a class="btn btn-ghost" href="https://www.legislation.gov.uk/ukpga/2000/36/contents" target="_blank" rel="noopener">Open</a>
+            <a class="btn btn-ghost" href="https://www.gov.uk/make-a-freedom-of-information-request" target="_blank" rel="noopener">Open</a>
           </div>
           <div class="resource">
             <div>
@@ -62,10 +67,17 @@
           </div>
           <div class="resource">
             <div>
-              <strong>Cabinet Office &mdash; FOI Code of Practice (s.45)</strong>
-              <div class="meta">How public authorities should handle requests, including consultation and transfers.</div>
+              <strong>NHS England &mdash; Information governance</strong>
+              <div class="meta">Sector hub for NHS information governance, including IG resources and FAQs relevant to FOI handling.</div>
             </div>
-            <a class="btn btn-ghost" href="https://www.gov.uk/government/publications/freedom-of-information-code-of-practice" target="_blank" rel="noopener">Open</a>
+            <a class="btn btn-ghost" href="https://www.england.nhs.uk/ig/" target="_blank" rel="noopener">Open</a>
+          </div>
+          <div class="resource">
+            <div>
+              <strong>Local Government Association &mdash; Governance and assurance</strong>
+              <div class="meta">LGA hub covering governance, accountability and assurance for councils &mdash; the home for FOI and transparency good practice.</div>
+            </div>
+            <a class="btn btn-ghost" href="https://www.local.gov.uk/our-support/governance-and-assurance" target="_blank" rel="noopener">Open</a>
           </div>
         </div>
         <p class="text-muted mt-2">Add your own internal FOI policy as a SharePoint knowledge source for organisation-specific nuances.</p>
@@ -483,9 +495,12 @@ K. Tomlinson</div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div>FOI Agent Webinar &middot; Resources</div>
-      <div><a href="index.html">Back to overview</a></div>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <img src="assets/img/copilot-color.png" alt="" class="copilot-logo" decoding="async" />
+        <span>Built with Copilot</span>
+      </div>
+      <div class="footer-fineprint">Views are my own, not Microsoft&rsquo;s. Examples illustrative only. Microsoft, Microsoft 365, Copilot and Outlook are trademarks of the Microsoft group of companies.</div>
     </div>
   </footer>
 

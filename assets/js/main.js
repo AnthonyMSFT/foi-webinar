@@ -25,6 +25,48 @@ document.addEventListener('DOMContentLoaded', () => {
     if (href === path) a.classList.add('active');
   });
 
+  // Lightbox: click any step-figure image to view it full size.
+  const figureImgs = document.querySelectorAll('.step-figure img');
+  if (figureImgs.length) {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightbox.innerHTML =
+      '<button type="button" class="lightbox-close" aria-label="Close">&times;</button>' +
+      '<img alt="" />';
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    const open = (src, alt) => {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      // Clear src after the transition so we don't hold the image in memory.
+      setTimeout(() => { lightboxImg.src = ''; }, 200);
+    };
+
+    figureImgs.forEach((img) => {
+      img.addEventListener('click', () => open(img.currentSrc || img.src, img.alt));
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === closeBtn) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) close();
+    });
+  }
+
   // "Try it in Outlook" — open Outlook on the Web compose with subject + body
   // pre-populated from the email card the button sits inside.
   document.querySelectorAll('.try-it').forEach((btn) => {
@@ -43,63 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(url, '_blank', 'noopener');
     });
   });
-
-  // Respect user motion preferences for all the scroll-driven flourishes below.
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Reveal-on-scroll: fade & slide sections in as they enter the viewport.
-  // The hero is excluded — it has its own parallax transform that would clash.
-  const revealTargets = document.querySelectorAll(
-    'section:not(.hero) > .container'
-  );
-  revealTargets.forEach((el) => el.classList.add('reveal'));
-
-  if (reduceMotion || !('IntersectionObserver' in window)) {
-    revealTargets.forEach((el) => el.classList.add('is-visible'));
-  } else {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
-    );
-    revealTargets.forEach((el) => io.observe(el));
-  }
-
-  // Hero parallax: nudge the hero content and background gradient as the user
-  // scrolls. Subtle — a few dozen pixels at most — to avoid motion sickness.
-  if (!reduceMotion) {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      let ticking = false;
-      const update = () => {
-        const rect = hero.getBoundingClientRect();
-        // Only animate while the hero is anywhere near the viewport.
-        if (rect.bottom > 0 && rect.top < window.innerHeight) {
-          const offset = window.scrollY;
-          hero.style.setProperty('--parallax-y', `${offset * 0.18}px`);
-          hero.style.setProperty('--parallax-bg', `${offset * 0.32}px`);
-        }
-        ticking = false;
-      };
-      window.addEventListener(
-        'scroll',
-        () => {
-          if (!ticking) {
-            window.requestAnimationFrame(update);
-            ticking = true;
-          }
-        },
-        { passive: true }
-      );
-      update();
-    }
-  }
 
   // Savings calculator
   const calcForm = document.getElementById('savings-form');

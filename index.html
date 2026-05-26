@@ -20,7 +20,7 @@
         <span>FOI Agent Webinar</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Overview</a>
+        <a href="index.html" class="active">Overview</a>
         <a href="build.html">Build the agent</a>
         <a href="resources.html">Resources</a>
       </nav>
@@ -148,7 +148,7 @@
 
         <figure class="demo-video">
           <div class="demo-video-frame">
-            <video controls preload="metadata" playsinline poster="assets/video/foi-agent-demo-poster.jpg">
+            <video controls preload="auto" playsinline poster="assets/video/foi-agent-demo-poster.jpg">
               <source src="assets/video/foi-agent-demo.webm" type="video/webm" />
               <source src="assets/video/foi-agent-demo.mp4" type="video/mp4" />
               Your browser doesn&rsquo;t support embedded video.
@@ -185,7 +185,7 @@
         <div class="experience-grid">
           <div class="experience experience-basic">
             <div class="experience-product" aria-hidden="true">
-              <img src="assets/img/copilot-color.png" alt="" class="experience-logo" />
+              <img src="assets/img/copilot-color.png" alt="" class="experience-logo" decoding="async" />
               <span>Copilot Chat</span>
             </div>
             <div class="experience-header">
@@ -507,18 +507,12 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/img/copilot-color.png" alt="" class="copilot-logo" />
-          <span>Built with Copilot</span>
-        </div>
-        <div>FOI Agent Webinar &middot; Companion site &middot; <a href="resources.html">Resources</a></div>
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <img src="assets/img/copilot-color.png" alt="" class="copilot-logo" decoding="async" />
+        <span>Built with Copilot</span>
       </div>
-      <div class="footer-fineprint">
-        <p>The views expressed are my own and do not represent Microsoft. Examples are illustrative only.</p>
-        <p>Microsoft, Microsoft 365, Copilot, and Outlook are trademarks of the Microsoft group of companies.</p>
-      </div>
+      <div class="footer-fineprint">Views are my own, not Microsoft&rsquo;s. Examples illustrative only. Microsoft, Microsoft 365, Copilot and Outlook are trademarks of the Microsoft group of companies.</div>
     </div>
   </footer>
 
