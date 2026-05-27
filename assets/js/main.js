@@ -25,6 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (href === path) a.classList.add('active');
   });
 
+  // Copy guidance URLs from resource cards.
+  document.querySelectorAll('.copy-url-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const url = btn.dataset.copyUrl;
+      if (!url) return;
+      try {
+        await navigator.clipboard.writeText(url);
+        btn.textContent = 'Copied';
+        setTimeout(() => (btn.textContent = 'Copy'), 1500);
+      } catch {
+        btn.textContent = 'Press Ctrl+C';
+        setTimeout(() => (btn.textContent = 'Copy'), 1500);
+      }
+    });
+  });
+
   // Lightbox: click any step-figure image to view it full size.
   const figureImgs = document.querySelectorAll('.step-figure img');
   if (figureImgs.length) {
