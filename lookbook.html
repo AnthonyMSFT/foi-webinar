@@ -1,0 +1,2000 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homepage Recording Lookbook — FOI Agent Webinar</title>
+  <meta name="description" content="A lookbook of 10 homepage recording section directions for the FOI Agent Webinar site." />
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cp-bg);
+      color: var(--cp-text);
+      font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--cp-link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell {
+      width: min(1320px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 56px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      background: var(--cp-panel-strong);
+      box-shadow: var(--cp-shadow);
+      position: sticky;
+      top: 14px;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--cp-accent-soft);
+      border: 1px solid var(--cp-border);
+      display: grid;
+      place-items: center;
+      color: var(--cp-accent);
+      font-weight: 800;
+      letter-spacing: .02em;
+      flex: 0 0 auto;
+    }
+    .brand-copy {
+      min-width: 0;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--cp-accent-soft);
+      color: var(--cp-accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h1, h2, h3, h4, p { margin: 0; }
+    h1 {
+      font-size: clamp(2rem, 3vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .lede {
+      max-width: 74ch;
+      color: var(--cp-text-muted);
+      font-size: 1.02rem;
+    }
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--cp-border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font: inherit;
+      color: var(--cp-text);
+      background: var(--cp-surface);
+      cursor: pointer;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
+    }
+    .btn:hover { border-color: var(--cp-border-strong); text-decoration: none; }
+    .btn-primary {
+      background: var(--cp-accent);
+      border-color: var(--cp-accent);
+      color: var(--cp-accent-fg);
+    }
+    .btn-primary:hover {
+      background: var(--cp-accent-hover);
+      border-color: var(--cp-accent-hover);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+      gap: 18px;
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--cp-surface) 0%, var(--cp-bg-elevated) 100%);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
+    }
+    .hero-panel {
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-panel);
+    }
+    .hero-panel strong { color: var(--cp-accent); }
+    .hero-note {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+    }
+    .hero-note .meta {
+      color: var(--cp-text-muted);
+      font-size: .94rem;
+    }
+    .hero-note-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .mini-stat {
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface-soft);
+    }
+    .mini-stat .value {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .mini-stat .label {
+      color: var(--cp-text-muted);
+      font-size: .84rem;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 18px 0 8px;
+      padding: 0 2px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      color: var(--cp-text);
+      font-size: .9rem;
+    }
+    .chip:hover { text-decoration: none; border-color: var(--cp-border-strong); }
+
+    .lookbook {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .look {
+      display: grid;
+      grid-template-columns: minmax(300px, .92fr) minmax(0, 1.08fr);
+      gap: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
+      scroll-margin-top: 98px;
+    }
+    .look:nth-child(even) { background: var(--cp-bg-elevated); }
+    .look-copy {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      padding: 6px 6px 6px 4px;
+    }
+    .look-kicker {
+      display: inline-flex;
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--cp-accent-soft);
+      color: var(--cp-accent);
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .look h2 {
+      font-size: clamp(1.35rem, 2vw, 1.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+    .look p { color: var(--cp-text-muted); }
+    .look-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--cp-surface-soft);
+      border: 1px solid var(--cp-border);
+      font-size: .8rem;
+      color: var(--cp-text);
+    }
+    .look-frame {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-bg-elevated);
+    }
+    .look-frame::before,
+    .look-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .look-frame::before {
+      background: linear-gradient(135deg, var(--cp-sheen), transparent 55%);
+      opacity: .55;
+      z-index: 1;
+    }
+    .look-frame::after {
+      background-image: linear-gradient(var(--cp-highlight) 1px, transparent 1px), linear-gradient(90deg, var(--cp-highlight) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: .28;
+      mask-image: linear-gradient(180deg, var(--cp-text) 0%, transparent 100%);
+    }
+    .look-shell {
+      position: absolute;
+      inset: 0;
+      padding: 18px;
+      z-index: 2;
+      display: grid;
+    }
+    .frame-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: var(--cp-text);
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+    .frame-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--cp-border-strong);
+      opacity: .85;
+    }
+    .frame-body {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+    .bar {
+      height: 14px;
+      border-radius: 999px;
+      background: var(--cp-surface-soft);
+      border: 1px solid var(--cp-border);
+    }
+    .bar.short { width: 42%; }
+    .bar.medium { width: 68%; }
+    .bar.long { width: 86%; }
+    .card-row {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .card-mini {
+      border-radius: 14px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      padding: 12px;
+      min-height: 90px;
+      display: grid;
+      gap: 8px;
+      align-content: start;
+    }
+    .card-mini .caption {
+      color: var(--cp-text-muted);
+      font-size: .82rem;
+    }
+    .cta-mini {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--cp-accent);
+      color: var(--cp-accent-fg);
+      font-weight: 700;
+      font-size: .86rem;
+    }
+    .cta-mini.alt {
+      background: var(--cp-surface-soft);
+      color: var(--cp-text);
+      border: 1px solid var(--cp-border);
+    }
+
+    /* Variant 1: cinematic band */
+    .v1 {
+      background: linear-gradient(135deg, var(--cp-surface) 0%, var(--cp-bg-elevated) 100%);
+    }
+    .v1 .look-shell {
+      grid-template-columns: 1.05fr .95fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .v1 .poster {
+      min-height: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: linear-gradient(135deg, var(--cp-surface), var(--cp-surface-soft));
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+      align-content: center;
+    }
+    .v1 .poster .headline {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+    .v1 .play {
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      background: var(--cp-accent);
+      display: grid;
+      place-items: center;
+      color: var(--cp-accent-fg);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    /* Variant 2: split glass */
+    .v2 .look-shell {
+      grid-template-columns: 1fr 1fr;
+      padding: 20px;
+      gap: 14px;
+    }
+    .glass {
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-panel);
+      backdrop-filter: blur(10px);
+      padding: 14px;
+    }
+    .glass .headline {
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+    .glass-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    /* Variant 3: ticket stub */
+    .v3 {
+      background: linear-gradient(135deg, var(--cp-bg-elevated), var(--cp-surface));
+    }
+    .ticket {
+      border: 1px dashed var(--cp-border-strong);
+      border-radius: 16px;
+      background: var(--cp-surface);
+      padding: 14px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      position: relative;
+    }
+    .ticket::before,
+    .ticket::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--cp-bg);
+      border: 1px solid var(--cp-border);
+      transform: translateY(-50%);
+    }
+    .ticket::before { left: -12px; }
+    .ticket::after { right: -12px; }
+    .stamp {
+      width: 86px;
+      height: 86px;
+      border-radius: 999px;
+      border: 2px solid var(--cp-accent);
+      color: var(--cp-accent);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      transform: rotate(-10deg);
+    }
+
+    /* Variant 4: editorial */
+    .v4 .look-shell {
+      grid-template-columns: 1fr;
+      align-content: space-between;
+    }
+    .editorial {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .editorial .headline {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: .98;
+    }
+    .editorial .lede {
+      max-width: 42ch;
+      color: var(--cp-text-muted);
+      font-size: .94rem;
+    }
+    .editorial-photo {
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: linear-gradient(135deg, var(--cp-surface), var(--cp-surface-soft));
+      height: 136px;
+      display: grid;
+      place-items: center;
+      color: var(--cp-text-soft);
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* Variant 5: neon spotlight */
+    .v5 {
+      background: linear-gradient(135deg, var(--cp-bg), var(--cp-bg-elevated));
+    }
+    .spotlight {
+      height: 100%;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      padding: 16px;
+      background: radial-gradient(circle at center, var(--cp-highlight), transparent 60%), linear-gradient(180deg, var(--cp-bg-elevated), var(--cp-bg));
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+    }
+    .spotlight-ring {
+      width: 170px;
+      height: 170px;
+      border-radius: 999px;
+      border: 2px solid var(--cp-accent);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 0 10px var(--cp-accent-soft);
+      margin-bottom: 12px;
+    }
+    .spotlight-ring .play {
+      width: 62px;
+      height: 62px;
+    }
+
+    /* Variant 6: layered cards */
+    .v6 .stack {
+      position: relative;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+    }
+    .layer {
+      position: absolute;
+      width: min(86%, 280px);
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
+      padding: 12px;
+    }
+    .layer.one { transform: translate(-18px, -18px) rotate(-5deg); }
+    .layer.two { transform: translate(18px, -6px) rotate(4deg); }
+    .layer.three { transform: translateY(10px); }
+
+    /* Variant 7: announcement block */
+    .v7 .announcement {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--cp-accent-soft), var(--cp-surface));
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+    }
+    .announcement .headline {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .alert {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--cp-accent);
+      color: var(--cp-accent-fg);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* Variant 8: timeline */
+    .v8 .timeline {
+      display: grid;
+      gap: 12px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .v8 .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--cp-border);
+    }
+    .milestone {
+      position: relative;
+      padding: 10px 12px 10px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+    }
+    .milestone::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 16px;
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--cp-accent);
+    }
+
+    /* Variant 9: device mockup */
+    .v9 .device {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+    .device-frame {
+      width: 92%;
+      border-radius: 18px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      overflow: hidden;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
+    }
+    .device-top {
+      height: 34px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 12px;
+      background: var(--cp-surface-soft);
+      border-bottom: 1px solid var(--cp-border);
+    }
+    .device-bar {
+      flex: 1;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--cp-bg-elevated);
+      border: 1px solid var(--cp-border);
+    }
+    .device-body {
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    /* Variant 10: hero within hero */
+    .v10 .bighero {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 12px;
+      align-items: center;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--cp-surface), var(--cp-bg-elevated));
+      border-radius: 16px;
+      border: 1px solid var(--cp-border);
+    }
+    .bighero .headline {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .bighero .stat {
+      padding: 12px;
+      border-radius: 14px;
+      background: var(--cp-accent-soft);
+      border: 1px solid var(--cp-border);
+    }
+    .bighero .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--cp-accent);
+      margin-bottom: 2px;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 14px 6px 0;
+      color: var(--cp-text-muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .look {
+        grid-template-columns: 1fr;
+      }
+      .topbar {
+        position: static;
+      }
+    }
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 20px, 1320px);
+      }
+      .topbar {
+        padding: 16px;
+      }
+      .hero,
+      .look {
+        padding: 14px;
+      }
+      .hero-note-grid {
+        grid-template-columns: 1fr;
+      }
+      .card-row {
+        grid-template-columns: 1fr;
+      }
+      .look-frame {
+        min-height: 300px;
+      }
+      .v1 .look-shell,
+      .v2 .look-shell,
+      .v7 .announcement,
+      .v10 .bighero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="badge">LB</div>
+        <div class="brand-copy">
+          <div class="eyebrow">Lookbook</div>
+          <h1>Homepage recording section concepts</h1>
+          <p class="lede">Ten visual directions for the webinar recording section, laid out as mockups so you can compare the mood, hierarchy, and click-through treatment at a glance.</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn" type="button" id="themeToggle">Toggle theme</button>
+        <a class="btn btn-primary" href="#look-10">Jump to final concept</a>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Lookbook summary">
+      <div class="hero-panel">
+        <div class="eyebrow">What this is</div>
+        <h2>Make the recording feel like the main event, not an afterthought.</h2>
+        <p class="lede" style="margin-top: 10px;">Each mockup keeps the same core message and LiveSend link pattern, but changes the section’s visual gravity: from cinematic to editorial, from ticket-like to layered and theatrical.</p>
+      </div>
+      <aside class="hero-note">
+        <div class="meta"><strong>Use case:</strong> homepage spotlight after the webinar finished.</div>
+        <div class="hero-note-grid">
+          <div class="mini-stat"><span class="value">10</span><span class="label">distinct directions</span></div>
+          <div class="mini-stat"><span class="value">1</span><span class="label">primary CTA per concept</span></div>
+          <div class="mini-stat"><span class="value">2</span><span class="label">shared messages</span></div>
+          <div class="mini-stat"><span class="value">0</span><span class="label">media moved off LiveSend</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <nav class="toolbar" aria-label="Quick jump to concept">
+      <a class="chip" href="#look-1">1. Cinematic band</a>
+      <a class="chip" href="#look-2">2. Split glass</a>
+      <a class="chip" href="#look-3">3. Ticket stub</a>
+      <a class="chip" href="#look-4">4. Editorial spread</a>
+      <a class="chip" href="#look-5">5. Neon spotlight</a>
+      <a class="chip" href="#look-6">6. Layered cards</a>
+      <a class="chip" href="#look-7">7. Announcement</a>
+      <a class="chip" href="#look-8">8. Timeline</a>
+      <a class="chip" href="#look-9">9. Device mockup</a>
+      <a class="chip" href="#look-10">10. Hero within hero</a>
+    </nav>
+
+    <main class="lookbook">
+      <article class="look" id="look-1">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 01</span>
+          <h2>Cinematic band</h2>
+          <p>A full-width, high-contrast band that treats the recording like a featured release. This is the strongest option if you want the section to feel like the natural next step after the hero.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: maximum attention</span>
+            <span class="tag">Mood: dramatic, premium</span>
+          </div>
+        </div>
+        <div class="look-frame v1">
+          <div class="look-shell">
+            <div class="poster">
+              <div class="eyebrow">Webinar recording</div>
+              <div class="headline">The webinar has now finished.</div>
+              <p class="lede">Thank you to everyone who got involved. You can view the recording here.</p>
+              <div class="play">▶</div>
+              <a class="cta-mini" href="#">Open recording</a>
+            </div>
+            <div class="card-mini">
+              <span class="caption">Poster frame</span>
+              <div class="bar long"></div>
+              <div class="bar medium"></div>
+              <div class="bar short"></div>
+              <div class="card-row">
+                <div class="card-mini"><span class="caption">Play overlay</span><div class="bar medium"></div></div>
+                <div class="card-mini"><span class="caption">CTA rail</span><div class="bar short"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-2">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 02</span>
+          <h2>Split glass panel</h2>
+          <p>Uses a translucent copy panel beside a frosted preview pane. It feels lighter than the cinematic option, but still intentionally elevated and contemporary.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: modern polish</span>
+            <span class="tag">Mood: cool, refined</span>
+          </div>
+        </div>
+        <div class="look-frame v2">
+          <div class="look-shell">
+            <div class="glass">
+              <div class="eyebrow">Public recording</div>
+              <div class="headline">Watch the recording</div>
+              <div class="glass-stack" style="margin-top: 12px;">
+                <div class="bar long"></div>
+                <div class="bar medium"></div>
+                <a class="cta-mini" href="#">Open recording</a>
+              </div>
+            </div>
+            <div class="glass">
+              <div class="glass-stack">
+                <div class="card-mini"><span class="caption">Screenshot preview</span><div class="bar long"></div><div class="bar medium"></div></div>
+                <div class="card-mini"><span class="caption">CSAM note</span><div class="bar medium"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-3">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 03</span>
+          <h2>Ticket stub / event pass</h2>
+          <p>Looks like a premium event ticket, with a perforated feel and a stamped badge. This adds personality and makes the section feel like a post-event artifact.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: playful energy</span>
+            <span class="tag">Mood: collectible, informal</span>
+          </div>
+        </div>
+        <div class="look-frame v3">
+          <div class="look-shell">
+            <div class="ticket">
+              <div>
+                <div class="eyebrow">Entry pass</div>
+                <div class="headline" style="font-size: 1.5rem; font-weight: 800; letter-spacing: -.03em;">Watch the recording</div>
+                <p class="lede" style="margin-top: 8px; max-width: 34ch;">The webinar has now finished. View the recording and share it with your team.</p>
+              </div>
+              <div class="stamp">LIVE<br />END</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-4">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 04</span>
+          <h2>Editorial spread</h2>
+          <p>Pushes typography harder and gives the section a magazine-style layout. Good if you want the page to feel curated and a little more premium.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: polished storytelling</span>
+            <span class="tag">Mood: sharp, considered</span>
+          </div>
+        </div>
+        <div class="look-frame v4">
+          <div class="look-shell editorial">
+            <div>
+              <div class="eyebrow">Recording</div>
+              <div class="headline">A finished webinar, presented like a feature story.</div>
+              <p class="lede" style="margin-top: 8px;">Thank you to everyone who got involved. The recording is ready whenever you are.</p>
+            </div>
+            <div class="editorial-photo">Feature image</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-5">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 05</span>
+          <h2>Neon spotlight</h2>
+          <p>A darker, stage-lit treatment with a bright focal ring around the preview. This is the highest-contrast version and the one most likely to “pop” on first glance.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: impact</span>
+            <span class="tag">Mood: theatrical, bold</span>
+          </div>
+        </div>
+        <div class="look-frame v5">
+          <div class="look-shell spotlight">
+            <div class="spotlight-ring">
+              <div class="play">▶</div>
+            </div>
+            <div class="headline" style="font-size: 1.25rem; font-weight: 800;">Watch the recording</div>
+            <p class="lede" style="margin-top: 6px; text-align: center; max-width: 34ch;">View the LiveSend recording from the spotlight rather than the background.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-6">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 06</span>
+          <h2>Floating layered cards</h2>
+          <p>Builds depth by stacking multiple offset cards behind the main message. It’s a neat way to suggest motion and content richness without a lot of copy.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: depth</span>
+            <span class="tag">Mood: tactile, premium</span>
+          </div>
+        </div>
+        <div class="look-frame v6">
+          <div class="look-shell stack">
+            <div class="layer one"></div>
+            <div class="layer two"></div>
+            <div class="layer three">
+              <div class="eyebrow">Recording</div>
+              <div class="headline" style="font-size: 1.35rem; font-weight: 800;">Three layers, one call to action</div>
+              <div class="bar long" style="margin-top: 10px;"></div>
+              <div class="bar medium"></div>
+              <a class="cta-mini" href="#" style="margin-top: 6px;">Open recording</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-7">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 07</span>
+          <h2>Announcement block</h2>
+          <p>Reads like a broadcast alert or news flash. Extremely clear, very direct, and easy to scan on a busy homepage.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: clarity</span>
+            <span class="tag">Mood: official, immediate</span>
+          </div>
+        </div>
+        <div class="look-frame v7">
+          <div class="look-shell">
+            <div class="announcement">
+              <div>
+                <div class="alert">Now available</div>
+                <div class="headline" style="margin-top: 8px;">Watch the recording</div>
+                <p class="lede" style="margin-top: 8px; max-width: 38ch;">The webinar has now finished. Thank you to everyone who got involved.</p>
+              </div>
+              <a class="cta-mini" href="#">Open</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-8">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 08</span>
+          <h2>Timeline / milestone panel</h2>
+          <p>Tells the story of the webinar as a completed moment, then hands off to the recording. Helpful if you want the section to feel grounded and sequential.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: narrative flow</span>
+            <span class="tag">Mood: structured, calm</span>
+          </div>
+        </div>
+        <div class="look-frame v8">
+          <div class="look-shell">
+            <div class="timeline">
+              <div class="milestone"><strong>Event finished</strong><br /><span class="caption">The live webinar has ended.</span></div>
+              <div class="milestone"><strong>Recording ready</strong><br /><span class="caption">Watch it here on LiveSend.</span></div>
+              <div class="milestone"><strong>Next step</strong><br /><span class="caption">Reach out to your CSAM for a follow-up webinar.</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-9">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 09</span>
+          <h2>Device mockup</h2>
+          <p>Puts the recording inside a browser/device shell. This makes it feel concrete and product-like, especially if you want the section to feel “real” rather than promotional.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: realism</span>
+            <span class="tag">Mood: product demo</span>
+          </div>
+        </div>
+        <div class="look-frame v9">
+          <div class="look-shell device">
+            <div class="device-frame">
+              <div class="device-top">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                <div class="device-bar"></div>
+              </div>
+              <div class="device-body">
+                <div class="eyebrow">LiveSend</div>
+                <div class="headline" style="font-size: 1.25rem; font-weight: 800;">Webinar recording</div>
+                <div class="bar long"></div>
+                <div class="card-row">
+                  <div class="card-mini"><span class="caption">Preview</span><div class="bar medium"></div></div>
+                  <div class="card-mini"><span class="caption">CTA</span><a class="cta-mini" href="#">Open recording</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="look" id="look-10">
+        <div class="look-copy">
+          <span class="look-kicker">Concept 10</span>
+          <h2>Hero within hero</h2>
+          <p>The most ambitious option: the recording section becomes a second hero, with stronger scale, a big headline, and a destination-first layout.</p>
+          <div class="look-meta">
+            <span class="tag">Best for: making it feel essential</span>
+            <span class="tag">Mood: dominant, premium</span>
+          </div>
+        </div>
+        <div class="look-frame v10">
+          <div class="look-shell bighero">
+            <div>
+              <div class="eyebrow">Recording spotlight</div>
+              <div class="headline">Watch the recording</div>
+              <p class="lede" style="margin-top: 10px; max-width: 34ch;">The webinar has now finished. Thank you to everyone who got involved.</p>
+              <a class="cta-mini" href="#" style="margin-top: 12px;">Open recording</a>
+            </div>
+            <div class="stat">
+              <strong>CSAM follow-up</strong>
+              <span class="lede" style="font-size: .92rem;">Reach out if you would like to see another webinar in future.</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">This lookbook uses the Clawpilot theme variables and is built as a single self-contained HTML artifact.</footer>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    themeToggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+    });
+  </script>
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recording Spotlight Lookbook</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--cp-bg);
+      color: var(--cp-text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--cp-link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    .shell {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 20% 0%, var(--cp-highlight), transparent 28%),
+        linear-gradient(135deg, var(--cp-surface) 0%, var(--cp-bg-elevated) 100%);
+      box-shadow: var(--cp-shadow);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(color-mix(in srgb, var(--cp-border) 36%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--cp-border) 26%, transparent) 1px, transparent 1px);
+      background-size: 56px 56px;
+      opacity: .25;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.8), rgba(0,0,0,0));
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.3fr .7fr; gap: 20px; align-items: end; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--cp-accent-soft);
+      color: var(--cp-accent);
+      border: 1px solid color-mix(in srgb, var(--cp-accent) 18%, var(--cp-border));
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      margin: 12px 0 10px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      max-width: 11ch;
+    }
+    .hero p { margin: 0; color: var(--cp-text-muted); max-width: 72ch; font-size: 1rem; }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+      color: var(--cp-text-soft);
+      font-size: .95rem;
+    }
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--cp-panel);
+      border: 1px solid var(--cp-border);
+    }
+    .meta-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--cp-accent);
+      box-shadow: 0 0 0 4px var(--cp-highlight);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--cp-border);
+      border-radius: 16px;
+      background: var(--cp-surface);
+      box-shadow: 0 0 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+      min-height: 320px;
+    }
+    .card-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 320px;
+    }
+    .card-copy {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+      min-width: 0;
+    }
+    .card-copy h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .card-copy p {
+      margin: 0;
+      color: var(--cp-text-muted);
+      font-size: .95rem;
+    }
+    .card-copy .kicker {
+      color: var(--cp-accent);
+      font-weight: 700;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+    .bullets {
+      display: grid;
+      gap: 8px;
+      margin-top: 2px;
+      color: var(--cp-text);
+      font-size: .9rem;
+    }
+    .bullets span {
+      display: flex;
+      gap: 8px;
+      align-items: start;
+    }
+    .bullets i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: .4rem;
+      flex: 0 0 auto;
+      background: var(--cp-accent);
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--cp-surface-soft);
+      border: 1px solid var(--cp-border);
+      color: var(--cp-text-soft);
+      font-size: .78rem;
+      font-weight: 600;
+    }
+    .visual {
+      position: relative;
+      background:
+        linear-gradient(135deg,
+          color-mix(in srgb, var(--cp-accent) 14%, transparent),
+          color-mix(in srgb, var(--cp-link) 14%, transparent));
+      border-left: 1px solid var(--cp-border);
+      min-height: 320px;
+      overflow: hidden;
+    }
+    .visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(color-mix(in srgb, var(--cp-border) 24%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--cp-border) 20%, transparent) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: .25;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.6), transparent 75%);
+    }
+    .mockup {
+      position: relative;
+      height: 100%;
+      padding: 18px;
+      display: grid;
+      place-items: center;
+    }
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+      border: 1px solid color-mix(in srgb, var(--cp-border) 60%, transparent);
+      background: var(--cp-panel-strong);
+      box-shadow: var(--cp-shadow);
+      overflow: hidden;
+    }
+    .screen .topbar {
+      height: 14px;
+      background: var(--cp-surface-soft);
+      border-bottom: 1px solid var(--cp-border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 10px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cp-border-strong);
+    }
+    .screen .content {
+      height: calc(100% - 14px);
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+    .hero-card {
+      border-radius: 14px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      padding: 14px;
+      min-height: 100px;
+      box-shadow: 0 0 2px rgba(0,0,0,.08), 0 1px 1px rgba(0,0,0,.08);
+    }
+    .hero-card.dark {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--cp-text) 96%, var(--cp-surface)), color-mix(in srgb, var(--cp-accent) 28%, var(--cp-text)));
+      color: var(--cp-surface);
+      border-color: color-mix(in srgb, var(--cp-surface) 20%, transparent);
+    }
+    .hero-card h3, .hero-card h4 { margin: 0; line-height: 1.15; }
+    .hero-card h3 { font-size: 1rem; }
+    .hero-card h4 { font-size: .95rem; }
+    .hero-card p { margin: 8px 0 0; color: var(--cp-text-muted); font-size: .86rem; }
+    .hero-card.dark p { color: color-mix(in srgb, var(--cp-surface) 76%, transparent); }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--cp-accent-soft);
+      border: 1px solid color-mix(in srgb, var(--cp-accent) 20%, var(--cp-border));
+      color: var(--cp-accent);
+      font-size: .74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .chip.alt {
+      background: color-mix(in srgb, var(--cp-link) 10%, transparent);
+      border-color: color-mix(in srgb, var(--cp-link) 24%, var(--cp-border));
+      color: var(--cp-link);
+    }
+    .chip.good {
+      background: color-mix(in srgb, var(--cp-success) 10%, transparent);
+      border-color: color-mix(in srgb, var(--cp-success) 22%, var(--cp-border));
+      color: var(--cp-success);
+    }
+    .chip.warn {
+      background: color-mix(in srgb, var(--cp-warning) 14%, transparent);
+      border-color: color-mix(in srgb, var(--cp-warning) 26%, var(--cp-border));
+      color: color-mix(in srgb, var(--cp-warning) 84%, var(--cp-text));
+    }
+
+    .layout-cinematic .visual { background: linear-gradient(145deg, color-mix(in srgb, var(--cp-text) 96%, var(--cp-surface)), color-mix(in srgb, var(--cp-accent) 28%, var(--cp-text))); }
+    .layout-cinematic .screen { transform: scale(.92); }
+    .layout-glass .visual { background: radial-gradient(circle at top, color-mix(in srgb, var(--cp-link) 20%, transparent), transparent 50%); }
+    .layout-glass .screen { background: var(--cp-panel); backdrop-filter: blur(8px); }
+    .layout-ticket .visual { background: linear-gradient(135deg, color-mix(in srgb, var(--cp-warning) 18%, transparent), color-mix(in srgb, var(--cp-accent) 14%, transparent)); }
+    .layout-ticket .screen { border-style: dashed; }
+    .layout-editorial .visual { background: linear-gradient(160deg, color-mix(in srgb, var(--cp-surface) 96%, var(--cp-bg)), color-mix(in srgb, var(--cp-accent) 10%, var(--cp-surface))); }
+    .layout-editorial .screen { border-radius: 0; }
+    .layout-neon .visual { background: radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--cp-accent) 22%, transparent), transparent 38%), linear-gradient(135deg, color-mix(in srgb, var(--cp-text) 96%, var(--cp-surface)), color-mix(in srgb, var(--cp-link) 24%, var(--cp-text))); }
+    .layout-layers .visual { background: linear-gradient(135deg, color-mix(in srgb, var(--cp-accent) 12%, transparent), color-mix(in srgb, var(--cp-warning) 12%, transparent)); }
+    .layout-announce .visual { background: linear-gradient(135deg, color-mix(in srgb, var(--cp-accent) 18%, transparent), color-mix(in srgb, var(--cp-text) 98%, var(--cp-surface))); }
+    .layout-timeline .visual { background: linear-gradient(135deg, color-mix(in srgb, var(--cp-link) 14%, transparent), color-mix(in srgb, var(--cp-accent) 14%, transparent)); }
+    .layout-device .visual { background: linear-gradient(135deg, color-mix(in srgb, var(--cp-text) 98%, var(--cp-surface)), color-mix(in srgb, var(--cp-accent) 20%, var(--cp-text))); }
+    .layout-hero .visual { background: linear-gradient(135deg, color-mix(in srgb, var(--cp-accent) 20%, transparent), color-mix(in srgb, var(--cp-link) 18%, transparent)); }
+
+    .card.layout-ticket .card-copy { background: linear-gradient(180deg, var(--cp-surface), color-mix(in srgb, var(--cp-accent-soft) 32%, var(--cp-surface))); }
+    .card.layout-neon .card-copy { background: linear-gradient(180deg, var(--cp-surface), color-mix(in srgb, var(--cp-link) 8%, var(--cp-surface))); }
+
+    .stack {
+      position: absolute;
+      inset: 18px;
+    }
+    .layer {
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      box-shadow: var(--cp-shadow);
+    }
+    .layer.l1 { transform: translate(10px, 10px) rotate(-4deg); opacity: .55; }
+    .layer.l2 { transform: translate(20px, 20px) rotate(2deg); opacity: .34; }
+    .layer.main { position: relative; inset: auto; height: 100%; }
+    .layer.main .hero-card { height: 100%; }
+
+    .timeline {
+      position: relative;
+      height: 100%;
+      padding: 20px;
+      display: grid;
+      align-content: center;
+      gap: 14px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 40px;
+      top: 18px;
+      bottom: 18px;
+      width: 3px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--cp-accent) 70%, var(--cp-surface));
+      opacity: .8;
+    }
+    .milestone {
+      position: relative;
+      margin-left: 24px;
+      padding: 14px 14px 14px 20px;
+      border: 1px solid var(--cp-border);
+      border-radius: 14px;
+      background: var(--cp-panel-strong);
+    }
+    .milestone::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: 18px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--cp-accent);
+      box-shadow: 0 0 0 5px var(--cp-highlight);
+    }
+    .milestone strong { display: block; margin-bottom: 4px; }
+    .milestone span { color: var(--cp-text-muted); font-size: .88rem; }
+
+    .device {
+      position: relative;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+    }
+    .laptop {
+      width: 100%;
+      max-width: 390px;
+      border-radius: 18px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      box-shadow: var(--cp-shadow);
+      padding: 12px 12px 18px;
+    }
+    .laptop .screen-area {
+      min-height: 220px;
+      border-radius: 12px;
+      border: 1px solid var(--cp-border);
+      background: linear-gradient(180deg, var(--cp-surface) 0%, var(--cp-surface-soft) 100%);
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+    }
+    .browser-bar {
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid var(--cp-border);
+      background: var(--cp-surface);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 10px;
+      color: var(--cp-text-muted);
+      font-size: .72rem;
+    }
+    .window-lines {
+      display: grid;
+      gap: 8px;
+    }
+    .window-line {
+      height: 12px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--cp-border) 55%, transparent);
+    }
+    .window-line.w1 { width: 88%; }
+    .window-line.w2 { width: 67%; }
+    .window-line.w3 { width: 78%; }
+    .window-line.w4 { width: 54%; }
+    .play-badge {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--cp-panel-strong);
+      border: 1px solid var(--cp-border);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--cp-shadow);
+    }
+    .play-badge::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 14px solid var(--cp-accent);
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      margin-left: 4px;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--cp-text-muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 1080px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-meta { justify-content: flex-start; }
+    }
+    @media (max-width: 760px) {
+      .shell { padding: 16px; }
+      .hero { padding: 20px; }
+      .card-inner { grid-template-columns: 1fr; }
+      .visual { min-height: 260px; border-left: 0; border-top: 1px solid var(--cp-border); }
+      .card { min-height: 0; }
+      .card-copy { padding: 16px; }
+      .screen, .laptop { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Lookbook</span>
+          <h1>10 ways to make the recording section pop</h1>
+          <p>
+            A side-by-side mockup set for the webinar recording area, ranging from
+            cinematic and editorial to ticket-style and device-framed treatments.
+            Each concept keeps the LiveSend video external and uses the same core
+            message, just with a different visual language.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-pill"><span class="meta-dot"></span> Recording stays on LiveSend</div>
+          <div class="meta-pill">Homepage-ready concepts</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid" id="lookbook"></main>
+
+    <p class="footer">Tip: open this file with <span style="font-family: Consolas, 'Courier New', Courier, monospace;">?clawpilotTheme=dark</span> to preview the dark theme.</p>
+  </div>
+
+  <script>
+    const concepts = [
+      {
+        name: "Cinematic band",
+        kicker: "Feature-led",
+        summary: "A full-width dark section that feels like a hero between chapters.",
+        bullets: ["High contrast", "Poster-first", "Big CTA"],
+        tags: ["Cinematic", "Bold", "Premium"],
+        layout: "layout-cinematic",
+        left: `
+          <div class="kicker">Recording spotlight</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Feels like a primary destination, not a support link.</span>
+            <span><i></i>Best when you want the recording to dominate the page.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Open recording</span><span class="tag">CSAM follow-up</span></div>
+        `,
+        right: `
+          <div class="screen">
+            <div class="topbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="content">
+              <div class="hero-card dark">
+                <h3>Webinar recording</h3>
+                <p>Strong title, minimal copy, big poster image, and a single action.</p>
+              </div>
+              <div class="hero-card" style="min-height: 150px; display:grid; place-items:center; background: linear-gradient(135deg, color-mix(in srgb, var(--cp-accent) 20%, transparent), color-mix(in srgb, var(--cp-link) 18%, transparent));">
+                <div class="play-badge"></div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Split glass",
+        kicker: "Modern",
+        summary: "Copy on one side, frosted image panel on the other.",
+        bullets: ["Glass effect", "Refined", "Balanced"],
+        tags: ["Glass", "Elegant", "Clean"],
+        layout: "layout-glass",
+        left: `
+          <div class="kicker">Featured content</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>A premium, calmer feel for a professional audience.</span>
+            <span><i></i>Good if you want the page to breathe without going plain.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Open recording</span><span class="tag">Resources page</span></div>
+        `,
+        right: `
+          <div class="screen">
+            <div class="topbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="content">
+              <div class="hero-card" style="background: var(--cp-panel); backdrop-filter: blur(8px);">
+                <h3>Frosted preview</h3>
+                <p>Soft translucency and restrained accent to keep the content feeling polished.</p>
+              </div>
+              <div class="hero-card" style="min-height: 140px; display:grid; place-items:center; background: linear-gradient(135deg, color-mix(in srgb, var(--cp-link) 12%, transparent), color-mix(in srgb, var(--cp-accent) 10%, transparent));">
+                <div class="play-badge"></div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Ticket stub",
+        kicker: "Playful",
+        summary: "Looks like an event ticket with a strong “recording” stamp.",
+        bullets: ["Cut-out feel", "Perforation cues", "Campaign energy"],
+        tags: ["Ticket", "Stamped", "Event"],
+        layout: "layout-ticket",
+        left: `
+          <div class="kicker">Event wrap-up</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Great if you want the section to feel like a special offer.</span>
+            <span><i></i>Works well as a visual call-out on the homepage.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Watch now</span><span class="tag">LiveSend</span></div>
+        `,
+        right: `
+          <div class="screen" style="background: linear-gradient(180deg, var(--cp-surface) 0%, color-mix(in srgb, var(--cp-warning) 8%, var(--cp-surface)) 100%); border-style: dashed;">
+            <div class="topbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="content" style="padding-top: 18px;">
+              <div class="hero-card" style="border-radius: 20px; border-style: dashed; background: var(--cp-surface); display:grid; gap: 10px;">
+                <div class="row"><span class="chip warn">Recording</span><span class="chip alt">Public</span></div>
+                <h3>Webinar access pass</h3>
+                <p>Stamped, ticket-like framing that makes the recording feel special and current.</p>
+              </div>
+              <div class="hero-card" style="min-height: 110px; display:grid; place-items:center; background: color-mix(in srgb, var(--cp-warning) 14%, var(--cp-surface)); border-style: dashed;">
+                <div class="play-badge"></div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Editorial spread",
+        kicker: "Magazine",
+        summary: "Typography-led and content-rich with a premium layout rhythm.",
+        bullets: ["Headline first", "Print-like", "High polish"],
+        tags: ["Editorial", "Story", "Refined"],
+        layout: "layout-editorial",
+        left: `
+          <div class="kicker">Feature article</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Feels less like a CTA block, more like an article lead.</span>
+            <span><i></i>Good for a polished, slightly more corporate audience.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Read more</span><span class="tag">Open recording</span></div>
+        `,
+        right: `
+          <div class="screen">
+            <div class="topbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="content" style="grid-template-rows: auto auto 1fr;">
+              <div class="hero-card" style="border-radius: 0; border-left: 4px solid var(--cp-accent);">
+                <div class="row"><span class="chip">Recording</span></div>
+                <h3>Webinar lookbook page</h3>
+                <p>Text-led composition with a structured editorial hierarchy.</p>
+              </div>
+              <div class="hero-card" style="background: linear-gradient(180deg, var(--cp-surface) 0%, color-mix(in srgb, var(--cp-accent-soft) 20%, var(--cp-surface)) 100%);">
+                <h4>Why it pops</h4>
+                <p>Uses generous whitespace, stronger type, and a magazine-style cover flow.</p>
+              </div>
+              <div class="hero-card" style="display:grid; place-items:center; min-height: 90px;">
+                <div class="play-badge"></div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Neon spotlight",
+        kicker: "High energy",
+        summary: "Dark, punchy, and vivid, with a strong spotlight effect.",
+        bullets: ["Big glow", "Stage feel", "Direct action"],
+        tags: ["Neon", "Glow", "Attention"],
+        layout: "layout-neon",
+        left: `
+          <div class="kicker">Spotlight</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Useful if the goal is pure visibility and clicks.</span>
+            <span><i></i>Most dramatic option in the set.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Pulse</span><span class="tag">Spotlight</span></div>
+        `,
+        right: `
+          <div class="screen" style="background: linear-gradient(180deg, color-mix(in srgb, var(--cp-text) 98%, var(--cp-surface)) 0%, color-mix(in srgb, var(--cp-accent) 22%, var(--cp-text)) 100%); border-color: color-mix(in srgb, var(--cp-accent) 36%, var(--cp-border));">
+            <div class="topbar" style="background: color-mix(in srgb, var(--cp-surface) 12%, transparent); border-color: color-mix(in srgb, var(--cp-surface) 16%, transparent);"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="content">
+              <div class="hero-card dark" style="min-height: 110px; display:grid; gap: 8px; align-content: start; background: linear-gradient(135deg, color-mix(in srgb, var(--cp-accent) 28%, var(--cp-text)), color-mix(in srgb, var(--cp-link) 16%, var(--cp-text)));">
+                <div class="row"><span class="chip" style="background: color-mix(in srgb, var(--cp-surface) 8%, transparent); border-color: color-mix(in srgb, var(--cp-surface) 22%, transparent); color: var(--cp-surface);">LiveSend</span></div>
+                <h3>Recording spotlight</h3>
+                <p>Bright, energetic, and impossible to miss against a dark stage.</p>
+              </div>
+              <div class="hero-card" style="min-height: 130px; display:grid; place-items:center; background: color-mix(in srgb, var(--cp-surface) 6%, transparent); border-color: color-mix(in srgb, var(--cp-surface) 18%, transparent);">
+                <div class="play-badge"></div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Layered cards",
+        kicker: "Depth",
+        summary: "Stacked panels create dimension and make the feature feel premium.",
+        bullets: ["Layered depth", "Tactile", "Designed"],
+        tags: ["Stacked", "Depth", "Premium"],
+        layout: "layout-layers",
+        left: `
+          <div class="kicker">Multi-layer</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Adds depth without cluttering the page.</span>
+            <span><i></i>Good if you want a crafted, bespoke feel.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Layered</span><span class="tag">Stack</span></div>
+        `,
+        right: `
+          <div class="mockup" style="padding: 24px;">
+            <div class="stack" aria-hidden="true">
+              <div class="layer l1"></div>
+              <div class="layer l2"></div>
+              <div class="layer main">
+                <div class="hero-card" style="height: 100%;">
+                  <div class="row"><span class="chip">Recording</span></div>
+                  <h3>Layered spotlight</h3>
+                  <p>Multiple offset frames make the section feel curated and dimensional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Announcement block",
+        kicker: "Direct",
+        summary: "A simple, loud announcement that makes the message the star.",
+        bullets: ["Straightforward", "High clarity", "Official feel"],
+        tags: ["Announcement", "Direct", "Clear"],
+        layout: "layout-announce",
+        left: `
+          <div class="kicker">Now available</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Ideal when the recording is the only thing you need to push.</span>
+            <span><i></i>No extra decoration, just a clean announcement state.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Announcement</span><span class="tag">Open now</span></div>
+        `,
+        right: `
+          <div class="screen" style="background: linear-gradient(180deg, color-mix(in srgb, var(--cp-accent) 10%, var(--cp-surface)) 0%, var(--cp-surface) 100%);">
+            <div class="topbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="content">
+              <div class="hero-card dark" style="background: linear-gradient(135deg, var(--cp-accent), color-mix(in srgb, var(--cp-text) 86%, var(--cp-accent)));">
+                <h3>Webinar has finished</h3>
+                <p>The recording is now available for anyone who missed it.</p>
+              </div>
+              <div class="hero-card" style="display:grid; place-items:center; min-height: 120px;">
+                <div class="play-badge"></div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Timeline milestone",
+        kicker: "Narrative",
+        summary: "Position the recording as the final milestone in an event journey.",
+        bullets: ["Story arc", "Event end state", "Useful context"],
+        tags: ["Timeline", "Milestone", "Journey"],
+        layout: "layout-timeline",
+        left: `
+          <div class="kicker">Event recap</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Works when you want the section to feel like part of a story.</span>
+            <span><i></i>Good for post-event pages and follow-up journeys.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Milestone</span><span class="tag">Recap</span></div>
+        `,
+        right: `
+          <div class="timeline">
+            <div class="milestone"><strong>Webinar ran live</strong><span>Interactive demo and audience Q&A.</span></div>
+            <div class="milestone"><strong>Recording published</strong><span>Now available on LiveSend for replay.</span></div>
+            <div class="milestone"><strong>Next conversation</strong><span>Reach out to your CSAM for another session.</span></div>
+          </div>
+        `
+      },
+      {
+        name: "Device mockup",
+        kicker: "Product-like",
+        summary: "The screenshot sits inside a browser or laptop frame for realism.",
+        bullets: ["Tangible", "Browser frame", "Familiar"],
+        tags: ["Device", "Frame", "Realistic"],
+        layout: "layout-device",
+        left: `
+          <div class="kicker">Browser preview</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>Makes the preview feel like a real product surface.</span>
+            <span><i></i>Useful if you want a credible, familiar frame.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Device</span><span class="tag">Screenshot</span></div>
+        `,
+        right: `
+          <div class="device">
+            <div class="laptop">
+              <div class="screen-area">
+                <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span> livesend.microsoft.com</div>
+                <div class="window-lines">
+                  <div class="window-line w1"></div>
+                  <div class="window-line w2"></div>
+                  <div class="window-line w3"></div>
+                  <div class="window-line w4"></div>
+                </div>
+                <div class="hero-card" style="min-height: 110px; display:grid; place-items:center; background: linear-gradient(135deg, color-mix(in srgb, var(--cp-accent) 12%, transparent), color-mix(in srgb, var(--cp-link) 12%, transparent));">
+                  <div class="play-badge"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        name: "Hero within hero",
+        kicker: "Max impact",
+        summary: "Treat the recording as a second hero section with oversized treatment.",
+        bullets: ["Grand scale", "Dual hero", "Strong CTA"],
+        tags: ["Hero", "Big", "Destination"],
+        layout: "layout-hero",
+        left: `
+          <div class="kicker">Secondary hero</div>
+          <h2>Watch the recording</h2>
+          <p>The webinar has now finished. Thank you to everyone who got involved. You can view the recording here.</p>
+          <div class="bullets">
+            <span><i></i>This is the loudest version: almost a hero section on its own.</span>
+            <span><i></i>Best if you want the recording to compete with the page headline.</span>
+          </div>
+          <div class="tag-row"><span class="tag">Secondary hero</span><span class="tag">Dominant</span></div>
+        `,
+        right: `
+          <div class="screen">
+            <div class="topbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="content">
+              <div class="hero-card dark" style="min-height: 120px; display:grid; gap: 8px; align-content: start;">
+                <div class="row"><span class="chip good">Recording</span><span class="chip alt">Replay</span></div>
+                <h3>Watch the webinar</h3>
+                <p>Presented like a destination page with one obvious action.</p>
+              </div>
+              <div class="hero-card" style="min-height: 130px; display:grid; place-items:center; background: linear-gradient(135deg, color-mix(in srgb, var(--cp-accent) 14%, transparent), color-mix(in srgb, var(--cp-link) 14%, transparent));">
+                <div class="play-badge"></div>
+              </div>
+            </div>
+          </div>
+        `
+      }
+    ];
+
+    const lookbook = document.getElementById("lookbook");
+    lookbook.innerHTML = concepts.map((concept) => `
+      <article class="card ${concept.layout}">
+        <div class="card-inner">
+          <div class="card-copy">
+            <div>
+              <div class="kicker">${concept.kicker}</div>
+              <h2>${concept.name}</h2>
+              <p>${concept.summary}</p>
+            </div>
+            <div class="bullets">
+              ${concept.bullets.map((bullet) => `<span><i></i>${bullet}</span>`).join("")}
+            </div>
+            <div class="tag-row">
+              ${concept.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
+            </div>
+          </div>
+          <div class="visual">
+            <div class="mockup">
+              ${concept.right}
+            </div>
+          </div>
+        </div>
+      </article>
+    `).join("");
+  </script>
+</body>
+</html>
